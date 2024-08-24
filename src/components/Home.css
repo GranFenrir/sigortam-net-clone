@@ -1,0 +1,84 @@
+/* Phone visual container styling */
+.phone-visual {
+    position: sticky;
+    top: 20px; /* Adjust this value to control the distance from the top of the viewport */
+    width: 300px; /* Adjust the width according to your design */
+    height: auto; /* Ensure it scales with the content */
+    margin: 0 auto; /* Center horizontally within its parent */
+    z-index: 1; /* Ensure it appears above other content if necessary */
+}
+
+/* Image container styling */
+.image-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    opacity: 0;
+    transition: opacity 0.5s, transform 1s;
+}
+
+.image-container img.show {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.image-container img.zoom-out {
+    transform: scale(0.9);
+    opacity: 0;
+}
+
+/* Text container styling */
+.text-container {
+    opacity: 0;
+    transition: opacity 0.5s;
+    max-width: 300px; /* Ensure text fits well */
+    margin: 0 auto; /* Center text container */
+    text-align: left; /* Align text to the left */
+    padding: 1rem; /* Add padding to create space inside the container */
+    z-index: 0; /* Ensure text appears below the phone visual if necessary */
+}
+
+.text-container h2 {
+    margin-bottom: 0.5rem; /* Space between title and text */
+}
+
+.text-container p {
+    margin-top: 0; /* Ensure no extra margin above the paragraph */
+}
+
+.text-container.show {
+    opacity: 1;
+}
+
+.button :hover {
+    background-color: #f0f0f0; /* Change background color on hover */
+}
+
+.carousel-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+.carousel {
+    width: 80%;
+    max-width: 900px;
+    background: #fff;
+    border-radius: 10px;
+}
+
+.carousel-item img {
+    height: auto;
+}
