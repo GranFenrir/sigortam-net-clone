@@ -1,6 +1,5 @@
 import React from 'react';
 import { useEffect, handleDropdownToggle, useState } from 'react';
-import { Carousel, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import one from '../photos/1.png';
@@ -29,12 +28,12 @@ const Home = () => {
         const image2 = document.getElementById('image2');
         const text1 = document.getElementById('text1');
         const text2 = document.getElementById('text2');
-    
+
         const onScroll = () => {
             const scrollY = window.scrollY;
-            const triggerPoint1 = 800; // Adjust for when text1 should appear
-            const triggerPoint2 = 1400; // Adjust for when text2 should appear
-    
+            const triggerPoint1 = 800;
+            const triggerPoint2 = 1400;
+
             if (scrollY >= triggerPoint1 && scrollY < triggerPoint2) {
                 image1.classList.add('show');
                 text1.classList.add('show');
@@ -52,12 +51,16 @@ const Home = () => {
                 text2.classList.remove('show');
             }
         };
-    
+
         window.addEventListener('scroll', onScroll);
-    
+
         return () => window.removeEventListener('scroll', onScroll);
     }, []);
-    
+
+    useEffect(() => {
+        setActiveCarousel(1);
+    }, []);
+
 
 
 
@@ -192,7 +195,7 @@ const Home = () => {
                 {/* Scroll Animation */}
                 <section style={{ position: 'relative', paddingTop: '4rem', paddingBottom: '4rem', textAlign: 'center' }}>
 
-                    <div className="container" style={{height:"2000px"}}>
+                    <div className="container">
                         <div className="row">
                             <div className="col">
                                 <div id="text1" className="text-container">
@@ -261,18 +264,36 @@ const Home = () => {
             </section>
 
 
-            <section style={{ backgroundColor: "#f5f7f9", paddingTop: "7rem", paddingBottom: "3.5rem" }}>
+            <section style={{ paddingTop: "7rem", paddingBottom: "3.5rem" }}>
                 <h1 className="text-center fw-bolder">Sigortam.net'te Sana Özel Neler Var?</h1>
                 <div className="container">
                     <div className="row justify-content-center">
-                        <div className="col-4 d-flex justify-content-center mb-4">
-                            <button type="button" className="btn btn-primary" onClick={() => setActiveCarousel(1)}>Carousel 1</button>
+                        <div className={`col d-flex justify-content-center mb-4 ${activeCarousel === 1 ? 'active' : ''}`}>
+                            <button
+                                type="button"
+                                className={`btn ${activeCarousel === 1 ? 'btn-primary' : 'btn-outline-primary'}`}
+                                onClick={() => setActiveCarousel(1)}
+                            >
+                                İndirimler & Kampanyalar
+                            </button>
                         </div>
-                        <div className="col-4 d-flex justify-content-center mb-4">
-                            <button type="button" className="btn btn-primary" onClick={() => setActiveCarousel(2)}>Carousel 2</button>
+                        <div className={`col d-flex justify-content-center mb-4 ${activeCarousel === 2 ? 'active' : ''}`}>
+                            <button
+                                type="button"
+                                className={`btn ${activeCarousel === 2 ? 'btn-primary' : 'btn-outline-primary'}`}
+                                onClick={() => setActiveCarousel(2)}
+                            >
+                                Reklam Filmleri
+                            </button>
                         </div>
-                        <div className="col-4 d-flex justify-content-center mb-4">
-                            <button type="button" className="btn btn-primary" onClick={() => setActiveCarousel(3)}>Carousel 3</button>
+                        <div className={`col d-flex justify-content-center mb-4 ${activeCarousel === 3 ? 'active' : ''}`}>
+                            <button
+                                type="button"
+                                className={`btn ${activeCarousel === 3 ? 'btn-primary' : 'btn-outline-primary'}`}
+                                onClick={() => setActiveCarousel(3)}
+                            >
+                                Öne Çıkanlar
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -280,22 +301,32 @@ const Home = () => {
                 {/* Carousels */}
                 <div className="container">
                     <div className="row justify-content-center">
-                        <div className="col-12 d-flex justify-content-center">
+                        <div className="col d-flex justify-content-center">
                             {activeCarousel === 1 && (
                                 <div id="carouselExample1" className="carousel slide">
                                     <div className="carousel-inner">
                                         <div className="carousel-item active">
-                                            <img src={one} className="d-block w-100" alt="Slide 1" />
+                                            <iframe
+                                                src="https://www.youtube.com/embed/VIDEO_ID_1"
+                                                className="d-block w-100"
+                                                title="Video 1"
+                                                allowFullScreen
+                                            ></iframe>
                                         </div>
                                         <div className="carousel-item">
-                                            <img src={two} className="d-block w-100" alt="Slide 2" />
+                                            <iframe
+                                                src="https://www.youtube.com/embed/VIDEO_ID_2"
+                                                className="d-block w-100"
+                                                title="Video 2"
+                                                allowFullScreen
+                                            ></iframe>
                                         </div>
                                     </div>
-                                    <button className="carousel-control-prev" type="button" data-bs-target="#carouselExample1" data-bs-slide="prev">
+                                    <button className="carousel-control-prev bg-black" type="button" data-bs-target="#carouselExample1" data-bs-slide="prev">
                                         <span className="carousel-control-prev-icon" aria-hidden="true"></span>
                                         <span className="visually-hidden">Previous</span>
                                     </button>
-                                    <button className="carousel-control-next" type="button" data-bs-target="#carouselExample1" data-bs-slide="next">
+                                    <button className="carousel-control-next bg-black" type="button" data-bs-target="#carouselExample1" data-bs-slide="next">
                                         <span className="carousel-control-next-icon" aria-hidden="true"></span>
                                         <span className="visually-hidden">Next</span>
                                     </button>
@@ -305,17 +336,27 @@ const Home = () => {
                                 <div id="carouselExample2" className="carousel slide">
                                     <div className="carousel-inner">
                                         <div className="carousel-item active">
-                                            <img src={three} className="d-block w-100" alt="Slide 1" />
+                                            <iframe
+                                                src="https://www.youtube.com/embed/VIDEO_ID_3"
+                                                className="d-block w-100"
+                                                title="Video 3"
+                                                allowFullScreen
+                                            ></iframe>
                                         </div>
                                         <div className="carousel-item">
-                                            <img src={four} className="d-block w-100" alt="Slide 2" />
+                                            <iframe
+                                                src="https://www.youtube.com/embed/VIDEO_ID_4"
+                                                className="d-block w-100"
+                                                title="Video 4"
+                                                allowFullScreen
+                                            ></iframe>
                                         </div>
                                     </div>
-                                    <button className="carousel-control-prev" type="button" data-bs-target="#carouselExample2" data-bs-slide="prev">
+                                    <button className="carousel-control-prev bg-black" type="button" data-bs-target="#carouselExample2" data-bs-slide="prev">
                                         <span className="carousel-control-prev-icon" aria-hidden="true"></span>
                                         <span className="visually-hidden">Previous</span>
                                     </button>
-                                    <button className="carousel-control-next" type="button" data-bs-target="#carouselExample2" data-bs-slide="next">
+                                    <button className="carousel-control-next bg-black" type="button" data-bs-target="#carouselExample2" data-bs-slide="next">
                                         <span className="carousel-control-next-icon" aria-hidden="true"></span>
                                         <span className="visually-hidden">Next</span>
                                     </button>
@@ -325,17 +366,27 @@ const Home = () => {
                                 <div id="carouselExample3" className="carousel slide">
                                     <div className="carousel-inner">
                                         <div className="carousel-item active">
-                                            <img src={five} className="d-block w-100" alt="Slide 1" />
+                                            <iframe
+                                                src="https://www.youtube.com/embed/VIDEO_ID_5"
+                                                className="d-block w-100"
+                                                title="Video 5"
+                                                allowFullScreen
+                                            ></iframe>
                                         </div>
                                         <div className="carousel-item">
-                                            <img src={six} className="d-block w-100" alt="Slide 2" />
+                                            <iframe
+                                                src="https://www.youtube.com/embed/VIDEO_ID_6"
+                                                className="d-block w-100"
+                                                title="Video 6"
+                                                allowFullScreen
+                                            ></iframe>
                                         </div>
                                     </div>
-                                    <button className="carousel-control-prev" type="button" data-bs-target="#carouselExample3" data-bs-slide="prev">
-                                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <button style={{ height: "150px" }} className="carousel-control-prev bg-black" type="button" data-bs-target="#carouselExample3" data-bs-slide="prev">
+                                        <span style={{ color: "red" }} className="carousel-control-prev-icon" aria-hidden="true"></span>
                                         <span className="visually-hidden">Previous</span>
                                     </button>
-                                    <button className="carousel-control-next" type="button" data-bs-target="#carouselExample3" data-bs-slide="next">
+                                    <button style={{ height: "150px" }} className="carousel-control-next bg-black " type="button" data-bs-target="#carouselExample3" data-bs-slide="next">
                                         <span className="carousel-control-next-icon" aria-hidden="true"></span>
                                         <span className="visually-hidden">Next</span>
                                     </button>
@@ -344,6 +395,58 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
+            </section>
+
+            <section style={{ backgroundColor: "#f5f7f9", paddingTop: "7rem", paddingBottom: "3.5rem" }}>
+                <h1 className="text-center fw-bolder">10 Milyon Mutlu Müşteri, 50+ Milyon Poliçe Teklifi</h1>
+                <class className="container">
+                    <div className="row justify-content-center" style={{paddingRight:"300px", paddingLeft:"300px"}}>
+                        <div className="col">
+                        <div className="card custom-card ">
+                                <div className="card-body">
+                                    <p className="card-title" style={{ fontSize: "1.05rem", lineHeight:"1.5", textAlign:"left"}}>İnternetten alınan bir poliçeden <span>çok daha fazlası.</span> Kaza anında çekicinin gelmesinden tutun sağlık durumunuza kadar her şeyle ilgileniyorlar.</p>
+                                    <p className="card-text" style={{ fontSize: "1.05rem", lineHeight:"1.5", textAlign:"right"}}>Kasım Ş.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col">
+                        <div className="card custom-card ">
+                                <div className="card-body">
+                                    <h5 className="card-title" style={{ fontSize: "1.05rem", lineHeight:"1.5", textAlign:"left"}}>Sigortam.net sayesinde evden çıkmadan tek bir telefonla trafik sigortası ve kaskoyu yaptırdım. Hızlı, sorunsuz ve güvenilir.</h5>
+                                    <p className="card-text" style={{ fontSize: "1.05rem", lineHeight:"1.5", textAlign:"right"}}>Murat İ.</p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col">
+                        <div className="card custom-card ">
+                                <div className="card-body">
+                                    <h5 className="card-title" style={{ fontSize: "1.05rem", lineHeight:"1.5", textAlign:"left"}}>Piyasadan alabileceğim kasko poliçesini aynı kapsamda taksitle, daha ucuza ve profesyonel hizmetle Sigortam.net üzerinden satın aldım.</h5>
+                                    <p className="card-text" style={{ fontSize: "1.05rem", lineHeight:"1.5", textAlign:"right"}}>Şaban K.</p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </class>
+            </section>
+
+
+
+            <section style={{ paddingTop: "7rem", paddingBottom: "3.5rem" }}>
+                <div className="container text-center">
+                    <div className="row justify-content-center">
+                        <div className="col">
+                            <h3 className="fw-bolder"  style={{textAlign:"left"}}>Ödüllerimizden bahsetmiş miydik?</h3>
+                            <p className="text-muted"  style={{textAlign:"left"}}>Dünyanın en prestijli ödüllerinden biri olan Stevie Awards’ta Sigorta Sektörünün En İyi Websitesi Ödülü’nü kazandık. Sizinle yürüdüğümüz bu yolda nice ödülleri kucaklamak dileğiyle...</p>
+                        </div>
+                        <div className="col">
+                            <h1 className="fw-bolder">Sigortam.net'ten Haberler</h1>
+                            <p className="text-muted">Sigortam.net'ten en güncel haberleri ve kampanyaları takip edin.</p>
+                        </div>
+                        </div>
+                    </div>
+
             </section>
 
 

@@ -1,84 +1,146 @@
-/* Phone visual container styling */
-.phone-visual {
-    position: sticky;
-    top: 20px; /* Adjust this value to control the distance from the top of the viewport */
-    width: 300px; /* Adjust the width according to your design */
-    height: auto; /* Ensure it scales with the content */
-    margin: 0 auto; /* Center horizontally within its parent */
-    z-index: 1; /* Ensure it appears above other content if necessary */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
 }
 
-/* Image container styling */
-.image-container {
-    position: relative;
+section {
+    padding: 2rem 0;
+}
+
+.custom-card {
+    border: none;
+    border-radius: 8px;
+    background-color: white;
+}
+
+.card-img-top {
+    max-height: 100px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+}
+
+.text-container {
+    display: none;
+    opacity: 0;
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.text-container.show {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.text-container:not(.show) {
+    transform: translateY(20px);
+}
+
+.phone-visual {
+    position: sticky;
+    top: 100px; /* Telefonun sabitlenmeye başlayacağı konum */
+    width: 200px; /* Sabit genişlik */
+    height: 400px; /* Sabit yükseklik */
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* İçeriklerin telefonun altına kaymaması için */
+}
+
+.phone-visual img {
     width: 100%;
     height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
 .image-container img {
-    width: 100%;
-    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover; /* Görüntünün kapsama biçimini ayarlıyoruz */
+    position: absolute;
     opacity: 0;
-    transition: opacity 0.5s, transform 1s;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
-.image-container img.show {
+#image1.show,
+#image2.show {
     opacity: 1;
     transform: scale(1.1);
 }
 
-.image-container img.zoom-out {
+#image1.zoom-out,
+#image2.zoom-out {
     transform: scale(0.9);
     opacity: 0;
 }
 
-/* Text container styling */
-.text-container {
-    opacity: 0;
-    transition: opacity 0.5s;
-    max-width: 300px; /* Ensure text fits well */
-    margin: 0 auto; /* Center text container */
-    text-align: left; /* Align text to the left */
-    padding: 1rem; /* Add padding to create space inside the container */
-    z-index: 0; /* Ensure text appears below the phone visual if necessary */
+/* Button Carousel Styles */
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
 }
 
-.text-container h2 {
-    margin-bottom: 0.5rem; /* Space between title and text */
+.btn-outline-primary {
+    background-color: transparent;
+    border-color: #007bff;
 }
 
-.text-container p {
-    margin-top: 0; /* Ensure no extra margin above the paragraph */
+.active .btn-primary {
+    background-color: #0056b3;
+    border-color: #0056b3;
 }
 
-.text-container.show {
-    opacity: 1;
-}
-
-.button :hover {
-    background-color: #f0f0f0; /* Change background color on hover */
-}
-
-.carousel-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 999;
-}
-
+/* Carousel Styles */
 .carousel {
-    width: 80%;
-    max-width: 900px;
-    background: #fff;
-    border-radius: 10px;
+    width: 600px;
+    height: 400px;
+    margin: 0 auto;
+    position: relative;
 }
 
-.carousel-item img {
-    height: auto;
+.carousel-inner {
+    width: 600px;
+    height: 400px; /* Belirli bir yükseklik ayarladık */
+    object-fit: cover; /* Görüntünün kapsama biçimini ayarlıyoruz */
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .custom-card {
+        margin-bottom: 2rem;
+    }
+
+    .phone-visual {
+        width: 300px; /* Daha küçük ekranlar için genişliği arttırıyoruz */
+        height: 300px; /* Yüksekliği küçültüyoruz */
+    }
+    
+    .carousel-inner img {
+        height: 300px; /* Küçük ekranlarda yüksekliği azaltıyoruz */
+    }
+}
+
+@media (max-width: 576px) {
+    .phone-visual {
+        width: 250px; /* Daha küçük ekranlar için genişliği küçültüyoruz */
+        height: 250px; /* Yüksekliği küçültüyoruz */
+    }
+
+    .carousel-inner img {
+        height: 200px; /* Daha küçük ekranlarda yüksekliği azaltıyoruz */
+    }
 }
