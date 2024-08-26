@@ -16,10 +16,28 @@ import eleven from '../photos/11.svg';
 import feature1 from '../photos/feature1.svg';
 import feature2 from '../photos/feature2.svg';
 import phone from '../photos/phone.jpg';
+import prize1 from '../photos/snet-gold-winner-badge.png';
+import prize2 from '../photos/if-design-award-2024-vertical.png';
 import '../components/Home.css';
 
 const Home = () => {
     const [activeCarousel, setActiveCarousel] = useState(null);
+
+    const insuranceCompanies = [
+        "Acıbadem Sigorta", "AKSigorta", "Allianz", "Anadolu Sigorta", "Anadolu Hayat Emeklilik",
+        "Aveon", "Axa Sigorta", "Axa Hayat Emeklilik", "Demir", "Doğa Sigorta",
+        "Eureko", "Fibabemeklilik", "GIG Sigorta", "HDI Sigorta", "Mapfre Sigorta",
+        "Neova Sigorta", "Orient Sigorta", "Quick Sigorta", "Ray Sigorta", "Sompo",
+        "Türkiye Sigorta", "Türk Nippon Sigorta", "Unico Sigorta", "Zurich Sigorta"
+    ];
+
+    const [showAll, setShowAll] = useState(false);
+
+    const displayedCompanies = showAll ? insuranceCompanies : insuranceCompanies.slice(0, 10);
+
+    const toggleShowAll = () => {
+        setShowAll(!showAll);
+    };
 
 
 
@@ -400,29 +418,29 @@ const Home = () => {
             <section style={{ backgroundColor: "#f5f7f9", paddingTop: "7rem", paddingBottom: "3.5rem" }}>
                 <h1 className="text-center fw-bolder">10 Milyon Mutlu Müşteri, 50+ Milyon Poliçe Teklifi</h1>
                 <class className="container">
-                    <div className="row justify-content-center" style={{paddingRight:"300px", paddingLeft:"300px"}}>
+                    <div className="row justify-content-center" style={{ paddingRight: "300px", paddingLeft: "300px" }}>
                         <div className="col">
-                        <div className="card custom-card ">
+                            <div className="card custom-card ">
                                 <div className="card-body">
-                                    <p className="card-title" style={{ fontSize: "1.05rem", lineHeight:"1.5", textAlign:"left"}}>İnternetten alınan bir poliçeden <span>çok daha fazlası.</span> Kaza anında çekicinin gelmesinden tutun sağlık durumunuza kadar her şeyle ilgileniyorlar.</p>
-                                    <p className="card-text" style={{ fontSize: "1.05rem", lineHeight:"1.5", textAlign:"right"}}>Kasım Ş.</p>
+                                    <p className="card-title" style={{ fontSize: "1.05rem", lineHeight: "1.5", textAlign: "left" }}>İnternetten alınan bir poliçeden <strong>çok daha fazlası.</strong> Kaza anında çekicinin gelmesinden tutun sağlık durumunuza kadar <strong>her şeyle ilgileniyorlar.</strong></p>
+                                    <p className="card-text" style={{ fontSize: "1.05rem", lineHeight: "1.5", textAlign: "right" }}>Kasım Ş.</p>
                                 </div>
                             </div>
                         </div>
                         <div className="col">
-                        <div className="card custom-card ">
+                            <div className="card custom-card ">
                                 <div className="card-body">
-                                    <h5 className="card-title" style={{ fontSize: "1.05rem", lineHeight:"1.5", textAlign:"left"}}>Sigortam.net sayesinde evden çıkmadan tek bir telefonla trafik sigortası ve kaskoyu yaptırdım. Hızlı, sorunsuz ve güvenilir.</h5>
-                                    <p className="card-text" style={{ fontSize: "1.05rem", lineHeight:"1.5", textAlign:"right"}}>Murat İ.</p>
+                                    <h5 className="card-title" style={{ fontSize: "1.05rem", lineHeight: "1.5", textAlign: "left" }}>Sigortam.net sayesinde evden çıkmadan <strong>tek bir telefonla </strong> trafik sigortası ve kaskoyu yaptırdım.<strong> Hızlı, sorunsuz ve güvenilir.</strong></h5>
+                                    <p className="card-text" style={{ fontSize: "1.05rem", lineHeight: "1.5", textAlign: "right" }}>Murat İ.</p>
 
                                 </div>
                             </div>
                         </div>
                         <div className="col">
-                        <div className="card custom-card ">
+                            <div className="card custom-card ">
                                 <div className="card-body">
-                                    <h5 className="card-title" style={{ fontSize: "1.05rem", lineHeight:"1.5", textAlign:"left"}}>Piyasadan alabileceğim kasko poliçesini aynı kapsamda taksitle, daha ucuza ve profesyonel hizmetle Sigortam.net üzerinden satın aldım.</h5>
-                                    <p className="card-text" style={{ fontSize: "1.05rem", lineHeight:"1.5", textAlign:"right"}}>Şaban K.</p>
+                                    <h5 className="card-title" style={{ fontSize: "1.05rem", lineHeight: "1.5", textAlign: "left" }}>Piyasadan alabileceğim kasko poliçesini aynı kapsamda <strong>taksitle, daha ucuza ve profesyonel hizmetle</strong> Sigortam.net üzerinden satın aldım.</h5>
+                                    <p className="card-text" style={{ fontSize: "1.05rem", lineHeight: "1.5", textAlign: "right" }}>Şaban K.</p>
 
                                 </div>
                             </div>
@@ -436,18 +454,122 @@ const Home = () => {
             <section style={{ paddingTop: "7rem", paddingBottom: "3.5rem" }}>
                 <div className="container text-center">
                     <div className="row justify-content-center">
-                        <div className="col">
-                            <h3 className="fw-bolder"  style={{textAlign:"left"}}>Ödüllerimizden bahsetmiş miydik?</h3>
-                            <p className="text-muted"  style={{textAlign:"left"}}>Dünyanın en prestijli ödüllerinden biri olan Stevie Awards’ta Sigorta Sektörünün En İyi Websitesi Ödülü’nü kazandık. Sizinle yürüdüğümüz bu yolda nice ödülleri kucaklamak dileğiyle...</p>
+                        <div className="col-5 col-md-5">
+                            <h2 className="fw-bold" style={{ textAlign: "left", lineHeight: "1rem" }}>Ödüllerimizden bahsetmiş <br /> <br /> miydik?</h2>
+                            <p className="text-muted" style={{ textAlign: "left", marginTop: "2rem" }}>Dünyanın en prestijli ödüllerinden biri olan Stevie Awards’ta Sigorta Sektörünün En İyi Websitesi Ödülü’nü kazandık. Sizinle yürüdüğümüz bu yolda nice ödülleri kucaklamak dileğiyle...</p>
                         </div>
-                        <div className="col">
-                            <h1 className="fw-bolder">Sigortam.net'ten Haberler</h1>
-                            <p className="text-muted">Sigortam.net'ten en güncel haberleri ve kampanyaları takip edin.</p>
+                        <div className="col-4">
+                            <div className='row'>
+                                <div className='col-6'>
+                                    <img src={prize1} style={{ width: "220px", height: "200px", marginLeft: "2rem" }} alt="Feature 1" />
+                                </div>
+                                <div className='col-6'>
+                                    <img src={prize2} style={{ width: "120px", height: "200px", marginLeft: "9rem" }} alt="Feature 2" />
+                                </div>
+                            </div>
                         </div>
+                    </div>
+                </div>
+
+            </section>
+
+
+
+            <section style={{ backgroundColor: "#f5f7f9", paddingTop: "7rem", paddingBottom: "3.5rem" }}>
+                {/* Sigorta Şirketleri */}
+                <div className="container text-center mt-5">
+                    <h3 className="mb-4 fw-bolder">20’den fazla sigorta şirketinden teklif al</h3>
+                    <div className="row">
+                        {displayedCompanies.map((company, index) => (
+                            <div className="col-12 col-sm-6 col-md-4 col-lg-2 mb-4 " key={index}>
+                                <div className="p-4 bg-white shadow-sm rounded d-flex" style={{ border: "1px ", height: "150px", display: "none", alignItems: "center", justifyContent: "center" }}>
+                                    <p className="mb-0" style={{ fontSize: "20px", color: "#333" }}>{company}</p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                    <button className="btn btn-primary mt-3" onClick={toggleShowAll}>
+                        {showAll ? "Daha Az Sigorta Şirketini Gör" : "+14 Sigorta Şirketini Gör"}
+                    </button>
+                </div>
+
+                {/* Sigortam.net Hakkında En Merak Edilen 5 Soru Accordion*/}
+                <div style={{ backgroundColor: "#f5f7f9", paddingTop: "7rem", paddingBottom: "3.5rem" }}>
+                    <h1 className='text-center fw-bolder mb-4'>Sigortam.net Hakkında En Merak Edilen 5 Soru</h1>
+
+                    <div className='col-8 offset-md-2'>
+
+                        <div class="accordion accordion-flush" id="accordionFlushExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                        Neden Sigortam.net’i tercih etmeliyim, farkınız nedir?
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">Sigortam.net Türkiye’nin ilk ve lider online sigorta brokeridir. Broker olarak farkımız, öncelikli olarak müşterilerimizi temsil etmemiz ve onların menfaatleri doğrultusunda hareket etmemizdir. Bu misyonla her zaman müşterilerimizin tarafındayız ve 20+ sigorta şirketi teklifini tek bir sayfada görmelerini, hem teminatları hem de fiyatları objektif olarak karşılaştırmalarını sağlıyoruz. Böylece müşterilerimiz ihtiyaçlarına en uygun sigortayı kolayca belirliyor ve online olarak satın alabiliyor. Ayrıca satış sonrası herhangi bir ihtiyacınızda 24 yıllık tecrübeli ekibimiz 7/24 desteğe hazır.</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                    Poliçe satışında müşterilerden ek ücret alıyor musunuz?
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">Hayır, hiçbir ek ücret almıyoruz. Müşterilerimizden yalnızca sigorta şirketinin belirlediği poliçe fiyatını tahsil ediyoruz. Bu fiyat üzerinden Sigortam.net indirimleri veya iş birliği kampanyalarımız ile müşterilerimize en iyi fırsatları sunuyoruz.</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                    Poliçe fiyatlarında indirim yapıyor musunuz?
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">Evet, sigorta şirketinin belirlediği poliçe fiyatı üzerinden, müşteriye özel Sigortam.net indirimleri uygulanabilir. Satın alma aşamasında kartınızdan sigorta şirketinin belirlediği tutar tahsil edilir, indirim tutarı Sigortam.net tarafından ödeme yapılan kredi kartına 1 hafta içerisinde iade edilir.</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                                    En iyi sigorta teklifini nasıl seçeceğim?
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">Anlaşmalı olduğumuz 20+ sigorta şirketinin müşterilerimize özel hazırladığı teklifleri fiyat ve teminatlar açısından puanlayıp öneriler hazırlıyoruz. Bu sayede müşterilerimiz teklifler arasından; en ucuz fiyata sahip ürün, fiyat/performans skoru en iyi olan ürün ve en kapsamlı teminat içeriğine sahip ürünü kolayca görebilir. Uzun süren incelemelere gerek kalmadan ihtiyacına en uygun poliçeyi hızlıca bulur ve güvencesini başlatır.</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                                    Sigortam.net’te kişisel bilgilerim güvende mi?
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">Evet, müşterilerimize özel sigorta teklifi için paylaşılan kişisel bilgiler ve ödeme bilgileri, tüm dünyada kabul edilip kullanılan SSL protokolümüz ile korunur. Sigortam.net TOBB tarafından verilen Güven Damgası’na sahip sigorta sektöründeki ilk şirkettir. Ödeme bilgileri sadece ödeme gerçekleştirilirken kullanılıp işlem sonrası kesinlikle kayıtlı tutulmaz. Bu güvenlik protokolleri sayesinde müşterilerimizin bilgileri Sigortam.net’e geldiği andan ödemenin tamamlanmasına kadar güvendedir.</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
+                </div>
+
             </section>
+
+
+            <section style={{ paddingTop: "7rem", paddingBottom: "3.5rem" }}>
+
+           <div className='col-6 offset-md-3'>
+                    
+                    
+                    
+            </div>
+            
+
+            </section>
+
+
 
 
 
