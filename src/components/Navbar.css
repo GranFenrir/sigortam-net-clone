@@ -1,5 +1,5 @@
 .navbar-logo {
-    height: 40px; /* Logonun boyutunu ayarlamak için */
+    height: 40px; 
 }
 
 .navbar-phone {
@@ -8,14 +8,14 @@
 }
 
 .navbar .btn-primary {
-    background-color: #007bff; /* Butonun rengini istediğiniz gibi ayarlayabilirsiniz */
+    background-color: #007bff; 
     border: none;
     padding: 10px 20px;
     border-radius: 20px;
 }
 
 .navbar .btn-primary:hover {
-    background-color: #0056b3; /* Hover efekti için */
+    background-color: #0056b3;
 }
 
 
@@ -29,15 +29,15 @@
     content: "";
     position: absolute;
     width: 0;
-    height: 2px; /* Çizgi kalınlığı */
+    height: 2px; 
     bottom: 0;
     left: 0;
-    background-color: rgb(39, 20, 126); /* Çizgi rengi */
-    opacity: 0; /* Başlangıçta görünmez yapar */
-    transition: width 0.3s ease, opacity 0.3s ease; /* Geçiş süresi ve hızı */
+    background-color: rgb(39, 20, 126); 
+    opacity: 0; 
+    transition: width 0.3s ease, opacity 0.3s ease; 
 }
 
 .text-underline:hover::after {
     width: 100%;
-    opacity: 1; /* Hover olduğunda görünür yapar */
+    opacity: 1; 
 }

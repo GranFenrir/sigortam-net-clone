@@ -340,11 +340,11 @@ const Home = () => {
                                             ></iframe>
                                         </div>
                                     </div>
-                                    <button className="carousel-control-prev bg-black" type="button" data-bs-target="#carouselExample1" data-bs-slide="prev">
+                                    <button style={{ height: "150px" }} className="carousel-control-prev bg-black" type="button" data-bs-target="#carouselExample1" data-bs-slide="prev">
                                         <span className="carousel-control-prev-icon" aria-hidden="true"></span>
                                         <span className="visually-hidden">Previous</span>
                                     </button>
-                                    <button className="carousel-control-next bg-black" type="button" data-bs-target="#carouselExample1" data-bs-slide="next">
+                                    <button style={{ height: "150px" }} className="carousel-control-next bg-black" type="button" data-bs-target="#carouselExample1" data-bs-slide="next">
                                         <span className="carousel-control-next-icon" aria-hidden="true"></span>
                                         <span className="visually-hidden">Next</span>
                                     </button>
@@ -370,11 +370,11 @@ const Home = () => {
                                             ></iframe>
                                         </div>
                                     </div>
-                                    <button className="carousel-control-prev bg-black" type="button" data-bs-target="#carouselExample2" data-bs-slide="prev">
+                                    <button style={{ height: "150px" }} className="carousel-control-prev bg-black" type="button" data-bs-target="#carouselExample2" data-bs-slide="prev">
                                         <span className="carousel-control-prev-icon" aria-hidden="true"></span>
                                         <span className="visually-hidden">Previous</span>
                                     </button>
-                                    <button className="carousel-control-next bg-black" type="button" data-bs-target="#carouselExample2" data-bs-slide="next">
+                                    <button style={{ height: "150px" }} className="carousel-control-next bg-black" type="button" data-bs-target="#carouselExample2" data-bs-slide="next">
                                         <span className="carousel-control-next-icon" aria-hidden="true"></span>
                                         <span className="visually-hidden">Next</span>
                                     </button>
@@ -416,38 +416,43 @@ const Home = () => {
             </section>
 
             <section style={{ backgroundColor: "#f5f7f9", paddingTop: "7rem", paddingBottom: "3.5rem" }}>
-                <h1 className="text-center fw-bolder">10 Milyon Mutlu Müşteri, 50+ Milyon Poliçe Teklifi</h1>
-                <class className="container">
-                    <div className="row justify-content-center" style={{ paddingRight: "300px", paddingLeft: "300px" }}>
-                        <div className="col">
-                            <div className="card custom-card ">
+                <h1 className="text-center fw-bolder mb-5">10 Milyon Mutlu Müşteri, 50+ Milyon Poliçe Teklifi</h1>
+                <div className="container">
+                    <div className="row justify-content-center">
+                        <div className="col-lg-4 col-md-6 mb-4">
+                            <div className="card custom-card h-100">
                                 <div className="card-body">
-                                    <p className="card-title" style={{ fontSize: "1.05rem", lineHeight: "1.5", textAlign: "left" }}>İnternetten alınan bir poliçeden <strong>çok daha fazlası.</strong> Kaza anında çekicinin gelmesinden tutun sağlık durumunuza kadar <strong>her şeyle ilgileniyorlar.</strong></p>
+                                    <p className="card-title" style={{ fontSize: "1.05rem", lineHeight: "1.5", textAlign: "left" }}>
+                                        İnternetten alınan bir poliçeden <strong>çok daha fazlası.</strong> Kaza anında çekicinin gelmesinden tutun sağlık durumunuza kadar <strong>her şeyle ilgileniyorlar.</strong>
+                                    </p>
                                     <p className="card-text" style={{ fontSize: "1.05rem", lineHeight: "1.5", textAlign: "right" }}>Kasım Ş.</p>
                                 </div>
                             </div>
                         </div>
-                        <div className="col">
-                            <div className="card custom-card ">
+                        <div className="col-lg-4 col-md-6 mb-4">
+                            <div className="card custom-card h-100">
                                 <div className="card-body">
-                                    <h5 className="card-title" style={{ fontSize: "1.05rem", lineHeight: "1.5", textAlign: "left" }}>Sigortam.net sayesinde evden çıkmadan <strong>tek bir telefonla </strong> trafik sigortası ve kaskoyu yaptırdım.<strong> Hızlı, sorunsuz ve güvenilir.</strong></h5>
+                                    <p className="card-title" style={{ fontSize: "1.05rem", lineHeight: "1.5", textAlign: "left" }}>
+                                        Sigortam.net sayesinde evden çıkmadan <strong>tek bir telefonla</strong> trafik sigortası ve kaskoyu yaptırdım. <strong>Hızlı, sorunsuz ve güvenilir.</strong>
+                                    </p>
                                     <p className="card-text" style={{ fontSize: "1.05rem", lineHeight: "1.5", textAlign: "right" }}>Murat İ.</p>
-
                                 </div>
                             </div>
                         </div>
-                        <div className="col">
-                            <div className="card custom-card ">
+                        <div className="col-lg-4 col-md-6 mb-4">
+                            <div className="card custom-card h-100">
                                 <div className="card-body">
-                                    <h5 className="card-title" style={{ fontSize: "1.05rem", lineHeight: "1.5", textAlign: "left" }}>Piyasadan alabileceğim kasko poliçesini aynı kapsamda <strong>taksitle, daha ucuza ve profesyonel hizmetle</strong> Sigortam.net üzerinden satın aldım.</h5>
+                                    <p className="card-title" style={{ fontSize: "1.05rem", lineHeight: "1.5", textAlign: "left" }}>
+                                        Piyasadan alabileceğim kasko poliçesini aynı kapsamda <strong>taksitle, daha ucuza ve profesyonel hizmetle</strong> Sigortam.net üzerinden satın aldım.
+                                    </p>
                                     <p className="card-text" style={{ fontSize: "1.05rem", lineHeight: "1.5", textAlign: "right" }}>Şaban K.</p>
-
                                 </div>
                             </div>
                         </div>
                     </div>
-                </class>
+                </div>
             </section>
+
 
 
 
@@ -513,7 +518,7 @@ const Home = () => {
                             <div class="accordion-item">
                                 <h2 class="accordion-header">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                                    Poliçe satışında müşterilerden ek ücret alıyor musunuz?
+                                        Poliçe satışında müşterilerden ek ücret alıyor musunuz?
                                     </button>
                                 </h2>
                                 <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
@@ -523,7 +528,7 @@ const Home = () => {
                             <div class="accordion-item">
                                 <h2 class="accordion-header">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                                    Poliçe fiyatlarında indirim yapıyor musunuz?
+                                        Poliçe fiyatlarında indirim yapıyor musunuz?
                                     </button>
                                 </h2>
                                 <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
@@ -533,7 +538,7 @@ const Home = () => {
                             <div class="accordion-item">
                                 <h2 class="accordion-header">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
-                                    En iyi sigorta teklifini nasıl seçeceğim?
+                                        En iyi sigorta teklifini nasıl seçeceğim?
                                     </button>
                                 </h2>
                                 <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
@@ -543,7 +548,7 @@ const Home = () => {
                             <div class="accordion-item">
                                 <h2 class="accordion-header">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
-                                    Sigortam.net’te kişisel bilgilerim güvende mi?
+                                        Sigortam.net’te kişisel bilgilerim güvende mi?
                                     </button>
                                 </h2>
                                 <div id="flush-collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
@@ -558,14 +563,112 @@ const Home = () => {
             </section>
 
 
-            <section style={{ paddingTop: "7rem", paddingBottom: "3.5rem" }}>
+            <section style={{ backgroundColor: "#f5f7f9", paddingTop: "7rem", paddingBottom: "3.5rem" }}>
 
-           <div className='col-6 offset-md-3'>
-                    
-                    
-                    
-            </div>
-            
+                <div className='row row-cols-6 col-6 offset-md-3'>
+
+                    <div className="col mb-4">
+                        <div className="custom-card" style={{ maxWidth: "250px", maxHeight: "250px" }}>
+                            <img src={one} style={{ width: "100px", height: "auto", display: "block", margin: "0 auto" }} className="card-img-top" alt="Kasko" />
+                            <div className="card-body">
+                                <h5 className="card-title" style={{ textAlign: "center", fontSize: "1rem", fontWeight: "bold" }}>Kasko</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col mb-4">
+                        <div className="custom-card h-100 w-100 ">
+                            <img src={one} style={{ width: "100px", height: "auto", display: "block", margin: "0 auto" }} className="card-img-top" alt="Kasko" />
+                            <div className="card-body">
+                                <h5 className="card-title" style={{ textAlign: "center", fontSize: "1rem", fontWeight: "bold" }}>Kasko</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col mb-4">
+                        <div className="custom-card ">
+                            <img src={one} style={{ width: "100px", height: "auto", display: "block", margin: "0 auto" }} className="card-img-top" alt="Kasko" />
+                            <div className="card-body">
+                                <h5 className="card-title" style={{ textAlign: "center", fontSize: "1rem", fontWeight: "bold" }}>Kasko</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col mb-4">
+                        <div className="custom-card ">
+                            <img src={three} style={{ width: "100px", height: "auto", display: "block", margin: "0 auto" }} className="card-img-top" alt="Kasko" />
+                            <div className="card-body">
+                                <h5 className="card-title" style={{ textAlign: "center", fontSize: "1rem", fontWeight: "bold" }}>Kasko</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col mb-4">
+                        <div className="custom-card ">
+                            <img src={six} style={{ width: "100px", height: "auto", display: "block", margin: "0 auto" }} className="card-img-top" alt="Kasko" />
+                            <div className="card-body">
+                                <h5 className="card-title" style={{ textAlign: "center", fontSize: "1rem", fontWeight: "bold" }}>Kasko</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col mb-4">
+                        <div className="custom-card custom-card h-100 w-100 ">
+                            <img src={seven} style={{ width: "100px", height: "auto", display: "block", margin: "0 auto" }} className="card-img-top" alt="Kasko" />
+                            <div className="card-body">
+                                <h5 className="card-title" style={{ textAlign: "center", fontSize: "1rem", fontWeight: "bold" }}>Kasko</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col mb-4">
+                        <div className="custom-card ">
+                            <img src={one} style={{ width: "100px", height: "auto", display: "block", margin: "0 auto" }} className="card-img-top" alt="Kasko" />
+                            <div className="card-body">
+                                <h5 className="card-title" style={{ textAlign: "center", fontSize: "1rem", fontWeight: "bold" }}>Kasko</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col mb-4">
+                        <div className="custom-card ">
+                            <img src={one} style={{ width: "100px", height: "auto", display: "block", margin: "0 auto" }} className="card-img-top" alt="Kasko" />
+                            <div className="card-body">
+                                <h5 className="card-title" style={{ textAlign: "center", fontSize: "1rem", fontWeight: "bold" }}>Kasko</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col mb-4">
+                        <div className="custom-card ">
+                            <img src={one} style={{ width: "100px", height: "auto", display: "block", margin: "0 auto" }} className="card-img-top" alt="Kasko" />
+                            <div className="card-body">
+                                <h5 className="card-title" style={{ textAlign: "center", fontSize: "1rem", fontWeight: "bold" }}>Kasko</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col mb-4">
+                        <div className="custom-card ">
+                            <img src={one} style={{ width: "100px", height: "auto", display: "block", margin: "0 auto" }} className="card-img-top" alt="Kasko" />
+                            <div className="card-body">
+                                <h5 className="card-title" style={{ textAlign: "center", fontSize: "1rem", fontWeight: "bold" }}>Kasko</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col mb-4">
+                        <div className="custom-card ">
+                            <img src={one} style={{ width: "100px", height: "auto", display: "block", margin: "0 auto" }} className="card-img-top" alt="Kasko" />
+                            <div className="card-body">
+                                <h5 className="card-title" style={{ textAlign: "center", fontSize: "1rem", fontWeight: "bold" }}>Kasko</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col mb-4">
+                        <div className="custom-card ">
+                            <img src={one} style={{ width: "100px", height: "auto", display: "block", margin: "0 auto" }} className="card-img-top" alt="Kasko" />
+                            <div className="card-body">
+                                <h5 className="card-title" style={{ textAlign: "center", fontSize: "1rem", fontWeight: "bold" }}>Kasko</h5>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+
 
             </section>
 

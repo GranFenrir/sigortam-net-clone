@@ -7,11 +7,7 @@ section {
     padding: 2rem 0;
 }
 
-.custom-card {
-    border: none;
-    border-radius: 8px;
-    background-color: white;
-}
+
 
 .card-img-top {
     max-height: 100px;
@@ -37,15 +33,15 @@ section {
 
 .phone-visual {
     position: sticky;
-    top: 100px; /* Telefonun sabitlenmeye başlayacağı konum */
-    width: 200px; /* Sabit genişlik */
-    height: 400px; /* Sabit yükseklik */
+    top: 100px; 
+    width: 200px; 
+    height: 400px; 
     background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    z-index: 1000; /* İçeriklerin telefonun altına kaymaması için */
+    z-index: 1000; 
 }
 
 .phone-visual img {
@@ -70,7 +66,7 @@ section {
 .image-container img {
     max-width: 100%;
     max-height: 100%;
-    object-fit: cover; /* Görüntünün kapsama biçimini ayarlıyoruz */
+    object-fit: cover;
     position: absolute;
     opacity: 0;
     transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
@@ -114,33 +110,32 @@ section {
 
 .carousel-inner {
     width: 600px;
-    height: 400px; /* Belirli bir yükseklik ayarladık */
-    object-fit: cover; /* Görüntünün kapsama biçimini ayarlıyoruz */
+    height: 400px;
+    object-fit: cover; 
 }
 
-/* Media Queries for Responsive Design */
 @media (max-width: 768px) {
     .custom-card {
         margin-bottom: 2rem;
     }
 
     .phone-visual {
-        width: 300px; /* Daha küçük ekranlar için genişliği arttırıyoruz */
-        height: 300px; /* Yüksekliği küçültüyoruz */
+        width: 300px;
+        height: 300px;
     }
     
     .carousel-inner img {
-        height: 300px; /* Küçük ekranlarda yüksekliği azaltıyoruz */
+        height: 300px; 
     }
 }
 
 @media (max-width: 576px) {
     .phone-visual {
-        width: 250px; /* Daha küçük ekranlar için genişliği küçültüyoruz */
-        height: 250px; /* Yüksekliği küçültüyoruz */
+        width: 250px;
+        height: 250px;
     }
 
     .carousel-inner img {
-        height: 200px; /* Daha küçük ekranlarda yüksekliği azaltıyoruz */
+        height: 200px; 
     }
 }
