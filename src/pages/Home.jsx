@@ -1,5 +1,6 @@
 import React from 'react';
-import { useEffect, handleDropdownToggle, useState, Link } from 'react';
+import { useEffect, handleDropdownToggle, useState } from 'react';
+import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import one from '../photos/1.png';
@@ -34,6 +35,18 @@ const Home = () => {
     const [showAll, setShowAll] = useState(false);
 
     const displayedCompanies = showAll ? insuranceCompanies : insuranceCompanies.slice(0, 10);
+
+    const generateUrlSlug = (companyName) => {
+        return companyName
+            .toLowerCase()
+            .replace(/\s+/g, '-')
+            .replace(/ğ/g, 'g')
+            .replace(/ü/g, 'u')
+            .replace(/ş/g, 's')
+            .replace(/ı/g, 'i')
+            .replace(/ö/g, 'o')
+            .replace(/ç/g, 'c');
+    };
 
     const toggleShowAll = () => {
         setShowAll(!showAll);
@@ -318,102 +331,114 @@ const Home = () => {
 
                 {/* Carousels */}
                 <div className="container">
-                    <div className="row justify-content-center">
-                        <div className="col d-flex justify-content-center">
-                            {activeCarousel === 1 && (
-                                <div id="carouselExample1" className="carousel slide">
-                                    <div className="carousel-inner">
-                                        <div className="carousel-item active">
-                                            <iframe
-                                                src="https://www.youtube.com/embed/VIDEO_ID_1"
-                                                className="d-block w-100"
-                                                title="Video 1"
-                                                allowFullScreen
-                                            ></iframe>
-                                        </div>
-                                        <div className="carousel-item">
-                                            <iframe
-                                                src="https://www.youtube.com/embed/VIDEO_ID_2"
-                                                className="d-block w-100"
-                                                title="Video 2"
-                                                allowFullScreen
-                                            ></iframe>
-                                        </div>
-                                    </div>
-                                    <button style={{ height: "150px" }} className="carousel-control-prev bg-black" type="button" data-bs-target="#carouselExample1" data-bs-slide="prev">
-                                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                                        <span className="visually-hidden">Previous</span>
-                                    </button>
-                                    <button style={{ height: "150px" }} className="carousel-control-next bg-black" type="button" data-bs-target="#carouselExample1" data-bs-slide="next">
-                                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                                        <span className="visually-hidden">Next</span>
-                                    </button>
-                                </div>
-                            )}
-                            {activeCarousel === 2 && (
-                                <div id="carouselExample2" className="carousel slide">
-                                    <div className="carousel-inner">
-                                        <div className="carousel-item active">
-                                            <iframe
-                                                src="https://www.youtube.com/embed/VIDEO_ID_3"
-                                                className="d-block w-100"
-                                                title="Video 3"
-                                                allowFullScreen
-                                            ></iframe>
-                                        </div>
-                                        <div className="carousel-item">
-                                            <iframe
-                                                src="https://www.youtube.com/embed/VIDEO_ID_4"
-                                                className="d-block w-100"
-                                                title="Video 4"
-                                                allowFullScreen
-                                            ></iframe>
-                                        </div>
-                                    </div>
-                                    <button style={{ height: "150px" }} className="carousel-control-prev bg-black" type="button" data-bs-target="#carouselExample2" data-bs-slide="prev">
-                                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                                        <span className="visually-hidden">Previous</span>
-                                    </button>
-                                    <button style={{ height: "150px" }} className="carousel-control-next bg-black" type="button" data-bs-target="#carouselExample2" data-bs-slide="next">
-                                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                                        <span className="visually-hidden">Next</span>
-                                    </button>
-                                </div>
-                            )}
-                            {activeCarousel === 3 && (
-                                <div id="carouselExample3" className="carousel slide">
-                                    <div className="carousel-inner">
-                                        <div className="carousel-item active">
-                                            <iframe
-                                                src="https://www.youtube.com/embed/VIDEO_ID_5"
-                                                className="d-block w-100"
-                                                title="Video 5"
-                                                allowFullScreen
-                                            ></iframe>
-                                        </div>
-                                        <div className="carousel-item">
-                                            <iframe
-                                                src="https://www.youtube.com/embed/VIDEO_ID_6"
-                                                className="d-block w-100"
-                                                title="Video 6"
-                                                allowFullScreen
-                                            ></iframe>
-                                        </div>
-                                    </div>
-                                    <button style={{ height: "150px" }} className="carousel-control-prev bg-black" type="button" data-bs-target="#carouselExample3" data-bs-slide="prev">
-                                        <span style={{ color: "red" }} className="carousel-control-prev-icon" aria-hidden="true"></span>
-                                        <span className="visually-hidden">Previous</span>
-                                    </button>
-                                    <button style={{ height: "150px" }} className="carousel-control-next bg-black " type="button" data-bs-target="#carouselExample3" data-bs-slide="next">
-                                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                                        <span className="visually-hidden">Next</span>
-                                    </button>
-                                </div>
-                            )}
+        <div className="row justify-content-center">
+            <div className="col-12 col-md-10 d-flex justify-content-center">
+                {activeCarousel === 1 && (
+                    <div id="carouselExample1" className="carousel slide">
+                        <div className="carousel-inner">
+                            <div className="carousel-item active">
+                                <iframe
+                                    src="https://www.youtube.com/embed/Mv1KT2prJ1E?si=y49VOLIrRLFJwm3e"
+                                    className="d-block w-100"
+                                    
+                                    title="Video 1"
+                                    allowFullScreen
+                                ></iframe>
+                            </div>
+                            <div className="carousel-item">
+                                <iframe
+                                    src="https://www.youtube.com/embed/VIDEO_ID_2"
+                                    className="d-block w-100"
+                                    style={{ height: "500px" }} 
+                                    title="Video 2"
+                                    allowFullScreen
+                                ></iframe>
+                            </div>
+                        </div>
+                        <div className="d-flex justify-content-center">
+                            <button className="carousel-control-prev" type="button" data-bs-target="#carouselExample1" data-bs-slide="prev">
+                                <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span className="visually-hidden">Previous</span>
+                            </button>
+                            <button className="carousel-control-next" type="button" data-bs-target="#carouselExample1" data-bs-slide="next">
+                                <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span className="visually-hidden">Next</span>
+                            </button>
                         </div>
                     </div>
-                </div>
-            </section>
+                )}
+                {activeCarousel === 2 && (
+                    <div id="carouselExample2" className="carousel slide">
+                        <div className="carousel-inner">
+                            <div className="carousel-item active">
+                                <iframe
+                                    src="https://www.youtube.com/embed/VIDEO_ID_3"
+                                    className="d-block w-100"
+                                    style={{ height: "500px" }}
+                                    title="Video 3"
+                                    allowFullScreen
+                                ></iframe>
+                            </div>
+                            <div className="carousel-item">
+                                <iframe
+                                    src="https://www.youtube.com/embed/VIDEO_ID_4"
+                                    className="d-block w-100"
+                                    style={{ height: "500px" }}
+                                    title="Video 4"
+                                    allowFullScreen
+                                ></iframe>
+                            </div>
+                        </div>
+                        <div className="d-flex justify-content-center">
+                            <button className="carousel-control-prev" type="button" data-bs-target="#carouselExample2" data-bs-slide="prev">
+                                <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span className="visually-hidden">Previous</span>
+                            </button>
+                            <button className="carousel-control-next" type="button" data-bs-target="#carouselExample2" data-bs-slide="next">
+                                <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span className="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                )}
+                {activeCarousel === 3 && (
+                    <div id="carouselExample3" className="carousel slide">
+                        <div className="carousel-inner">
+                            <div className="carousel-item active">
+                                <iframe
+                                    src="https://www.youtube.com/embed/VIDEO_ID_5"
+                                    className="d-block w-100"
+                                    style={{ height: "500px" }}
+                                    title="Video 5"
+                                    allowFullScreen
+                                ></iframe>
+                            </div>
+                            <div className="carousel-item">
+                                <iframe
+                                    src="https://www.youtube.com/embed/VIDEO_ID_6"
+                                    className="d-block w-100"
+                                    style={{ height: "500px" }}
+                                    title="Video 6"
+                                    allowFullScreen
+                                ></iframe>
+                            </div>
+                        </div>
+                        <div className="d-flex justify-content-center">
+                            <button className="carousel-control-prev" type="button" data-bs-target="#carouselExample3" data-bs-slide="prev">
+                                <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span className="visually-hidden">Previous</span>
+                            </button>
+                            <button className="carousel-control-next" type="button" data-bs-target="#carouselExample3" data-bs-slide="next">
+                                <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span className="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                )}
+            </div>
+        </div>
+    </div>
+</section>
 
             <section style={{ backgroundColor: "#f5f7f9", paddingTop: "7rem", paddingBottom: "3.5rem" }}>
                 <h1 className="text-center fw-bolder mb-5">10 Milyon Mutlu Müşteri, 50+ Milyon Poliçe Teklifi</h1>
@@ -454,19 +479,19 @@ const Home = () => {
             </section>
 
             <section style={{ paddingTop: "7rem", paddingBottom: "3.5rem" }}>
-                <div className="container text-center">
-                    <div className="row justify-content-center">
-                        <div className="col-5 col-md-5">
+                <div className="container">
+                    <div className="row align-center">
+                        <div className="col-sm-12 col-md-6">
                             <h2 className="fw-bold" style={{ textAlign: "left", lineHeight: "1rem" }}>Ödüllerimizden bahsetmiş <br /> <br /> miydik?</h2>
                             <p className="text-muted" style={{ textAlign: "left", marginTop: "2rem" }}>Dünyanın en prestijli ödüllerinden biri olan Stevie Awards’ta Sigorta Sektörünün En İyi Websitesi Ödülü’nü kazandık. Sizinle yürüdüğümüz bu yolda nice ödülleri kucaklamak dileğiyle...</p>
                         </div>
-                        <div className="col-4">
-                            <div className='row'>
+                        <div className="col-sm-12 col-md-6 col-xl-6 justify-flex-end">
+                            <div className='row justify-content-end d-flex'>
                                 <div className='col-6'>
-                                    <img src={prize1} style={{ width: "220px", height: "200px", marginLeft: "2rem" }} alt="Feature 1" />
+                                    <img src={prize1} style={{ width: "220px", height: "200px"}} alt="Feature 1" />
                                 </div>
                                 <div className='col-6'>
-                                    <img src={prize2} style={{ width: "120px", height: "200px", marginLeft: "9rem" }} alt="Feature 2" />
+                                    <img src={prize2} style={{ width: "120px", height: "200px"}} alt="Feature 2" />
                                 </div>
                             </div>
                         </div>
@@ -481,18 +506,20 @@ const Home = () => {
                 {/* Sigorta Şirketleri */}
                 <div className="container text-center mt-5">
                     <h3 className="mb-4 fw-bolder">20’den fazla sigorta şirketinden teklif al</h3>
-                    <div className="row">
-                        {displayedCompanies.map((company, index) => (
-                            <div className="col-12 col-sm-6 col-md-4 col-lg-2 mb-4" key={index}>
-                                {/* Link to Company Page 
-                                <Link to={`/company/${company.toLowerCase().replace(/\s+/g, '-')}`}>
-                                    <div className="p-4 bg-white shadow-sm rounded d-flex" style={{ border: "1px", height: "150px", alignItems: "center", justifyContent: "center" }}>
-                                        <p className="mb-0" style={{ fontSize: "20px", color: "#333" }}>{company}</p>
-                                    </div>
-                                </Link>
-                                */}
-                            </div>
-                        ))}
+                    <div className="container text-center mt-5">
+                        
+                        <div className="row">
+                            {displayedCompanies.map((company, index) => (
+                                <div className="col-12 col-sm-6 col-md-4 col-lg-2 mb-4" key={index}>
+                                    <Link to={`/company/${generateUrlSlug(company)}`}>
+                                        <div className="p-4 bg-white shadow-sm rounded d-flex" style={{ height: "150px", alignItems: "center", justifyContent: "center" }}>
+                                            <p className="mb-0" style={{ fontSize: "16px", color: "#333" }}>{company}</p>
+                                        </div>
+                                    </Link>
+                                </div>
+                            ))}
+                        </div>
+                        
                     </div>
                     <button className="btn btn-primary mt-3" onClick={toggleShowAll}>
                         {showAll ? "Daha Az Sigorta Şirketini Gör" : "+14 Sigorta Şirketini Gör"}

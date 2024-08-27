@@ -18,7 +18,7 @@ const Footer = () => {
             <img src={logo} alt="Sigortam.net Logo" />
             <p>© 2000-2024 Sigortam.net</p>
           </div>
-          <div className="col text-right">
+          <div className="col justify-content-end d-flex">
             <img src={design} alt="IF Design Award 2024" className="mb-3" style={{ maxWidth: "100px", maxHeight: "100px" }} />
             <img src={design2} alt="Snet Gold Winner Badge" className="mb-3" style={{ maxWidth: "100px", maxHeight: "100px" }} />
           </div>
@@ -83,7 +83,7 @@ const Footer = () => {
                 <li><a href="#" style={{ textDecoration: "none", color: "black" }}>Sigortam.net Basketbol Takımı</a></li>
               </ul>
             </div>
-            <div className="col-md-3">
+            <div className="col-md-3 justify-content-end">
               <h5>Yardımcı olmaya hazırız</h5>
               <p className="font-weight-bold">444 24 00</p>
               <h6>Bizi Takip Edin</h6>

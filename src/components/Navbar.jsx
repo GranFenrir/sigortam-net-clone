@@ -7,7 +7,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min';
 
 const Navbar = () => {
     return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <nav className="navbar navbar-expand-lg navbar-light bg-light sticky-top">
             <div className="container-fluid">
                 <a className="navbar-brand" href="#">
                     <img src={photo} alt="Sigortam.net Logo" className="navbar-logo" style={{paddingLeft:"40px", width:"auto", height:"auto"}} />
