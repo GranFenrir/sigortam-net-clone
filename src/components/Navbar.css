@@ -41,3 +41,32 @@
     width: 100%;
     opacity: 1; 
 }
+
+/* Navbar.css */
+.mega-dropdown {
+    width: 100%;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .mega-dropdown .container {
+    max-width: 1200px;
+  }
+  
+  .mega-dropdown h6 {
+    margin-bottom: 1rem;
+    font-weight: bold;
+  }
+  
+  .mega-dropdown .dropdown-item {
+    padding: 0.5rem 0;
+  }
+  
+  .mega-dropdown .badge {
+    margin-left: 0.5rem;
+  }
+  

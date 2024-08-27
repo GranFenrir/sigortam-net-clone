@@ -14,11 +14,11 @@ const Footer = () => {
     <footer className="bg-light pt-5">
       <div className="container">
         <div className="row d-flex">
-          <div className="col-3">
-            <img src={logo} alt="Sigortam.net Logo" className="mb-3" />
+          <div className="col">
+            <img src={logo} alt="Sigortam.net Logo" />
             <p>© 2000-2024 Sigortam.net</p>
           </div>
-          <div className="col-6 offset-8">
+          <div className="col text-right">
             <img src={design} alt="IF Design Award 2024" className="mb-3" style={{ maxWidth: "100px", maxHeight: "100px" }} />
             <img src={design2} alt="Snet Gold Winner Badge" className="mb-3" style={{ maxWidth: "100px", maxHeight: "100px" }} />
           </div>

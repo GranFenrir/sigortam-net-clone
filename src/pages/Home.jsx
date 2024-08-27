@@ -1,5 +1,5 @@
 import React from 'react';
-import { useEffect, handleDropdownToggle, useState } from 'react';
+import { useEffect, handleDropdownToggle, useState, Link } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import one from '../photos/1.png';
@@ -217,8 +217,8 @@ const Home = () => {
                         <div className="row">
                             <div className="col">
                                 <div id="text1" className="text-container">
-                                    <h2>Title 1</h2>
-                                    <p>Text 1</p>
+                                    <h2>Hangi ürün bana en uygun diye düşünme, biz senin için en net teklifleri sıraladık bile!</h2>
+                                    <p>Tüm teminatları tek tek inceledik, ihtiyaçlarına en uygun olan teminatları belirledik. Sana özel kapsamlı ve fiyatı uygun ürün önerileri hazırladık.</p>
                                 </div>
                                 <br />
                                 <br />
@@ -261,8 +261,8 @@ const Home = () => {
                                 <br />
                                 <br />
                                 <div id="text2" className="text-container">
-                                    <h2>Title 2</h2>
-                                    <p>Text 2</p>
+                                    <h2>Sadece 2 dakikada tüm teklifleri kolayca karşılaştır.</h2>
+                                    <p>20+ sigorta şirketinden teklifleri tek platformda karşılaştır, internete özel indirimlerle uygun fiyata sigortan anında başlasın.</p>
                                 </div>
                             </div>
                             <div className="col">
@@ -453,9 +453,6 @@ const Home = () => {
                 </div>
             </section>
 
-
-
-
             <section style={{ paddingTop: "7rem", paddingBottom: "3.5rem" }}>
                 <div className="container text-center">
                     <div className="row justify-content-center">
@@ -486,10 +483,14 @@ const Home = () => {
                     <h3 className="mb-4 fw-bolder">20’den fazla sigorta şirketinden teklif al</h3>
                     <div className="row">
                         {displayedCompanies.map((company, index) => (
-                            <div className="col-12 col-sm-6 col-md-4 col-lg-2 mb-4 " key={index}>
-                                <div className="p-4 bg-white shadow-sm rounded d-flex" style={{ border: "1px ", height: "150px", display: "none", alignItems: "center", justifyContent: "center" }}>
-                                    <p className="mb-0" style={{ fontSize: "20px", color: "#333" }}>{company}</p>
-                                </div>
+                            <div className="col-12 col-sm-6 col-md-4 col-lg-2 mb-4" key={index}>
+                                {/* Link to Company Page 
+                                <Link to={`/company/${company.toLowerCase().replace(/\s+/g, '-')}`}>
+                                    <div className="p-4 bg-white shadow-sm rounded d-flex" style={{ border: "1px", height: "150px", alignItems: "center", justifyContent: "center" }}>
+                                        <p className="mb-0" style={{ fontSize: "20px", color: "#333" }}>{company}</p>
+                                    </div>
+                                </Link>
+                                */}
                             </div>
                         ))}
                     </div>
@@ -663,20 +664,8 @@ const Home = () => {
                             </div>
                         </div>
                     </div>
-
-
-
-
                 </div>
-
-
             </section>
-
-
-
-
-
-
 
         </div>
     );
