@@ -20,6 +20,7 @@ import phone from '../photos/phone.jpg';
 import prize1 from '../photos/snet-gold-winner-badge.png';
 import prize2 from '../photos/if-design-award-2024-vertical.png';
 import '../components/Home.css';
+import Navbar from '../components/Navbar';
 
 const Home = () => {
     const [activeCarousel, setActiveCarousel] = useState(null);
@@ -93,127 +94,136 @@ const Home = () => {
     }, []);
 
 
-
-
-
-
-
-
     return (
         <div>
 
-            <section style={{ paddingTop: "7rem", backgroundColor: "#f5f7f9", paddingBottom: "3.5rem" }}>
+<section style={{ paddingTop: "7rem", backgroundColor: "#f5f7f9", paddingBottom: "3.5rem" }}>
+    <div className="container text-center  col-6 offset-3">
+        <h1 style={{ fontFamily: "sans-serif", fontSize: "3rem" }} className='fw-bolder'>Sigortada Güvenin Adresi</h1>
+        <small className="text-muted d-block" style={{ fontSize: "1.2rem", marginBottom: "3rem" }}>Doğru Ürün. İyi Fiyat. 7/24 Hizmet.</small>
 
-                <div className="container text-center">
-
-                    <h1 style={{ fontFamily: "sans-serif", fontSize: "3rem" }} className='fw-bolder'>Sigortada Güvenin Adresi</h1>
-                    <small className="text-muted d-block" style={{ fontSize: "1.2rem", marginBottom: "3rem" }}>Doğru Ürün. İyi Fiyat. 7/24 Hizmet.</small>
-
-                    <div className="row justify-content-center" style={{ maxWidth: "900px", margin: "0 auto" }}>
-                        {/* Üst Sıradaki Kartlar */}
-                        <div className="col mb-4">
-                            <div className="card custom-card ">
-                                <img src={one} style={{ width: "100px", height: "auto", display: "block", margin: "0 auto" }} className="card-img-top" alt="Kasko" />
-                                <div className="card-body">
-                                    <h5 className="card-title" style={{ fontSize: "1rem", fontWeight: "bold" }}>Kasko</h5>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col mb-4">
-                            <div className="card custom-card ">
-                                <img src={two} style={{ width: "100px", height: "auto", display: "block", margin: "0 auto" }} className="card-img-top" alt="Elektrikli Araç Kaskosu" />
-                                <div className="card-body">
-                                    <h5 className="card-title" style={{ fontSize: "1rem", fontWeight: "bold" }}>Elektrikli Araç Kaskosu</h5>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col mb-4">
-                            <div className="card custom-card">
-                                <img src={three} style={{ width: "100px", height: "auto", display: "block", margin: "0 auto" }} className="card-img-top" alt="Tamamlayıcı Sağlık" />
-                                <div className="card-body">
-                                    <h5 className="card-title" style={{ fontSize: "1rem", fontWeight: "bold" }}>Tamamlayıcı Sağlık</h5>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className='row justify-content-center'>
-                            {/* Alt Sıradaki Kartlar */}
-                            <div className="col mb-4">
-                                <div className="card custom-card">
-                                    <img src={four} style={{ width: "100px", height: "auto", display: "block", margin: "0 auto" }} className="card-img-top" alt="Trafik Sigortası" />
-                                    <div className="card-body">
-                                        <h5 className="card-title" style={{ fontSize: "1rem", fontWeight: "bold" }}>Trafik Sigortası</h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col mb-4">
-                                <div className="card custom-card">
-                                    <img src={five} style={{ width: "100px", height: "auto", display: "block", margin: "0 auto" }} className="card-img-top" alt="İMM" />
-                                    <div className="card-body">
-                                        <h5 className="card-title" style={{ fontSize: "1rem", fontWeight: "bold" }}>İMM</h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col mb-4">
-                                <div className="card custom-card">
-                                    <img src={six} style={{ width: "100px", height: "auto", display: "block", margin: "0 auto" }} className="card-img-top" alt="Özel Sağlık" />
-                                    <div className="card-body">
-                                        <h5 className="card-title" style={{ fontSize: "1rem", fontWeight: "bold" }}>Özel Sağlık</h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col mb-4">
-                                <div className="card custom-card">
-                                    <img src={seven} style={{ width: "100px", height: "auto", display: "block", margin: "0 auto" }} className="card-img-top" alt="Seyahat Sağlık" />
-                                    <div className="card-body">
-                                        <h5 className="card-title" style={{ fontSize: "1rem", fontWeight: "bold" }}>Seyahat Sağlık</h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col mb-4">
-                                <div className="card custom-card">
-                                    <img src={eight} style={{ width: "100px", height: "auto", display: "block", margin: "0 auto" }} className="card-img-top" alt="DASK" />
-                                    <div className="card-body">
-                                        <h5 className="card-title" style={{ fontSize: "1rem", fontWeight: "bold" }}>DASK</h5>
-                                    </div>
-                                </div>
-                            </div>
+        <div className="row justify-content-between align-items-start">
+            {/* Üst Sıradaki Kartlar (3 cards) */}
+            <div className="col-12 col-sm-6 col-md-4 mb-4">
+                <a href="#" style={{ textDecoration: "none" }} className="text-primary">
+                    <div className="card custom-card" id='x'>
+                        <img src={one} className="card-img-top" alt="Kasko" />
+                        <div className="card-body">
+                            <h5 className="card-title" style={{ fontSize: "1rem", fontWeight: "bold" }}>Kasko</h5>
                         </div>
                     </div>
+                </a>
+            </div>
+            <div className="col-12 col-sm-6 col-md-4 mb-4">
+                <a href="#" style={{ textDecoration: "none" }} className="text-primary">
+                    <div className="card custom-card" id='x'>
+                        <img src={two} className="card-img-top" alt="Elektrikli Araç Kaskosu" />
+                        <div className="card-body">
+                            <h5 className="card-title" style={{ fontSize: "1rem", fontWeight: "bold" }}>Elektrikli Araç Kaskosu</h5>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div className="col-12 col-sm-6 col-md-4 mb-4">
+                <a href="#" style={{ textDecoration: "none" }} className="text-primary">
+                    <div className="card custom-card" id='x'>
+                        <img src={three} className="card-img-top" alt="Tamamlayıcı Sağlık" />
+                        <div className="card-body">
+                            <h5 className="card-title" style={{ fontSize: "1rem", fontWeight: "bold" }}>Tamamlayıcı Sağlık</h5>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
 
-                    <a href="#" onClick={handleDropdownToggle} className="mt-4 d-block text-primary">
-                        Tüm Ürünleri Gör
-                    </a>
-                </div>
-            </section>
+        <div className="row justify-content-between align-items-start">
+            {/* Alt Sıradaki Kartlar (5 cards) */}
+            <div className="col-12 col-sm-6 col-md-4 col-lg-2 mb-4">
+                <a href="#" style={{ textDecoration: "none" }} className="text-primary">
+                    <div className="card custom-card" id='x'>
+                        <img src={four} className="card-img-top" alt="Trafik Sigortası" />
+                        <div className="card-body">
+                            <h5 className="card-title" style={{ fontSize: "1rem", fontWeight: "bold" }}>Trafik Sigortası</h5>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div className="col-12 col-sm-6 col-md-4 col-lg-2 mb-4">
+                <a href="#" style={{ textDecoration: "none" }} className="text-primary">
+                    <div className="card custom-card" id='x'>
+                        <img src={five} className="card-img-top" alt="İMM" />
+                        <div className="card-body">
+                            <h5 className="card-title" style={{ fontSize: "1rem", fontWeight: "bold" }}>İMM</h5>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div className="col-12 col-sm-6 col-md-4 col-lg-2 mb-4">
+                <a href="#" style={{ textDecoration: "none" }} className="text-primary">
+                    <div className="card custom-card" id='x'>
+                        <img src={six} className="card-img-top" alt="Özel Sağlık" />
+                        <div className="card-body">
+                            <h5 className="card-title" style={{ fontSize: "1rem", fontWeight: "bold" }}>Özel Sağlık</h5>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div className="col-12 col-sm-6 col-md-4 col-lg-2 mb-4">
+                <a href="#" style={{ textDecoration: "none" }} className="text-primary">
+                    <div className="card custom-card" id='x'>
+                        <img src={seven} className="card-img-top" alt="Seyahat Sağlık" />
+                        <div className="card-body">
+                            <h5 className="card-title" style={{ fontSize: "1rem", fontWeight: "bold" }}>Seyahat Sağlık</h5>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div className="col-12 col-sm-6 col-md-4 col-lg-2 mb-4">
+                <a href="#" style={{ textDecoration: "none" }} className="text-primary">
+                    <div className="card custom-card" id='x'>
+                        <img src={eight} className="card-img-top" alt="DASK" />
+                        <div className="card-body">
+                            <h5 className="card-title" style={{ fontSize: "1rem", fontWeight: "bold" }}>DASK</h5>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <a href="#" onClick={handleDropdownToggle} className="mt-4 d-block text-primary">
+            Tüm Ürünleri Gör
+        </a>
+    </div>
+</section>
+
+
 
             <section >
                 <div className="container text-center pt-5">
-
                     <p className='fw-bolder fs-2'>Poliçemi neden Sigortam.net’ten almalıyım?</p>
 
                     <div className='row justify-content-center pt-xl-5'>
-                        <div className='col'>
+                        <div className='col-lg-4 col-md-6 col-sm-12 mb-4'>
                             <div className='custom-card'>
-                                <img src={nine} style={{ width: "100px", height: "auto", display: "block", margin: "0 auto" }} className="card-img-top" alt="Doğru Ürun" />
+                                <img src={nine} className="card-img-top" alt="Doğru Ürun" />
                                 <div className='card-body'>
                                     <h5 className='card-title fw-bolder'>Doğru Ürün</h5>
-                                    <p className='card-text text-muted d-block'>Yenilenen yapay zekâmızla, onlarca sigorta teklifi arasından ucuzunu, sana uygununu ve kapsamlısını buluyoruz. Net teminatlar ve net fiyatlarla kararın hep net olsun</p>
+                                    <p className='card-text text-muted d-block'>Yenilenen yapay zekâmızla, onlarca sigorta teklifi arasından ucuzunu, sana uygununu ve kapsamlısını buluyoruz. Net teminatlar ve net fiyatlarla kararın hep net olsun.</p>
                                 </div>
                             </div>
                         </div>
-                        <div className='col'>
+                        <div className='col-lg-4 col-md-6 col-sm-12 mb-4'>
                             <div className='custom-card'>
-                                <img src={ten} style={{ width: "100px", height: "auto", display: "block", margin: "0 auto" }} className="card-img-top" alt="İyi Fiyat" />
+                                <img src={ten} className="card-img-top" alt="İyi Fiyat" />
                                 <div className='card-body'>
                                     <h5 className='card-title fw-bolder'>İyi Fiyat</h5>
                                     <p className='card-text text-muted d-block'>Önceliğimiz her zaman sensin. Çalıştığımız tüm şirketlerde bütçeni düşünerek “en iyi fiyat garantisi” sunuyoruz.</p>
                                 </div>
                             </div>
                         </div>
-                        <div className='col'>
+                        <div className='col-lg-4 col-md-6 col-sm-12 mb-4'>
                             <div className='custom-card'>
-                                <img src={eleven} style={{ width: "100px", height: "auto", display: "block", margin: "0 auto" }} className="card-img-top" alt="7/24 Hizmet" />
+                                <img src={eleven} className="card-img-top" alt="7/24 Hizmet" />
                                 <div className='card-body'>
                                     <h5 className='card-title fw-bolder'>7/24 Hizmet</h5>
                                     <p className="text-muted d-block card-text">24 yıllık tecrübemiz ve uzman sigorta danışmanlarımızla 7/24 her ihtiyacında yanındayız. Üstelik hasar anında saniyeler içinde bize ulaşabilirsin.</p>
@@ -223,76 +233,64 @@ const Home = () => {
                     </div>
                 </div>
 
-                {/* Scroll Animation */}
-                <section style={{ position: 'relative', paddingTop: '4rem', paddingBottom: '4rem', textAlign: 'center' }}>
+            </section>
 
-                    <div className="container">
-                        <div className="row">
-                            <div className="col">
-                                <div id="text1" className="text-container">
-                                    <h2>Hangi ürün bana en uygun diye düşünme, biz senin için en net teklifleri sıraladık bile!</h2>
-                                    <p>Tüm teminatları tek tek inceledik, ihtiyaçlarına en uygun olan teminatları belirledik. Sana özel kapsamlı ve fiyatı uygun ürün önerileri hazırladık.</p>
-                                </div>
-                                <br />
-                                <br />
-                                <br />
-                                <br />
-                                <br />
-                                <br />
-                                <br />
-                                <br />
-                                <br />
-                                <br />
-                                <br />
-                                <br />
-                                <br />
-                                <br />
-                                <br />
-                                <br />
-                                <br />
-                                <br />
-                                <br />
-                                <br />
-                                <br />
-                                <br />
-                                <br />
-                                <br />
-                                <br />
-                                <br />
-                                <br />
-                                <br />
-                                <br />
-                                <br />
-                                <br />
-                                <br />
-                                <br />
-                                <br />
-                                <br />
-                                <br />
-                                <br />
-                                <br />
-                                <br />
-                                <br />
-                                <div id="text2" className="text-container">
-                                    <h2>Sadece 2 dakikada tüm teklifleri kolayca karşılaştır.</h2>
-                                    <p>20+ sigorta şirketinden teklifleri tek platformda karşılaştır, internete özel indirimlerle uygun fiyata sigortan anında başlasın.</p>
-                                </div>
+            {/* Scroll Animation */}
+            <section style={{ position: 'relative', paddingTop: '4rem', paddingBottom: '4rem', textAlign: 'center' }}>
+
+                <div className="container">
+                    <div className="row">
+                        <div className="col">
+                            <div id="text1" className="text-container text-start">
+                                <h3 className='fw-bold'>Hangi ürün bana en uygun diye düşünme, biz senin için en net teklifleri sıraladık bile!</h3>
+                                <p>Tüm teminatları tek tek inceledik, ihtiyaçlarına en uygun olan teminatları belirledik. Sana özel kapsamlı ve fiyatı uygun ürün önerileri hazırladık.</p>
                             </div>
-                            <div className="col">
-                                <div className="phone-visual">
-                                    <img src={phone} alt="Phone Visual" />
-                                    <div className="image-container" >
-                                        <img id="image1" src={feature1} alt="First Image" />
-                                        <img id="image2" src={feature2} alt="Second Image" />
-                                    </div>
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <div id="text2" className="text-container text-start">
+                                <h3 className='fw-bold'>Sadece 2 dakikada tüm teklifleri kolayca karşılaştır.</h3>
+                                <p>20+ sigorta şirketinden teklifleri tek platformda karşılaştır, internete özel indirimlerle uygun fiyata sigortan anında başlasın.</p>
+                            </div>
+                        </div>
+                        <div className="col" style={{ textAlign: "center" }} >
+                            <div className="phone-visual">
+                                <img src={phone} alt="Phone Visual" />
+                                <div className="image-container" >
+                                    <img id="image1" src={feature1} alt="First Image" />
+                                    <img id="image2" src={feature2} alt="Second Image" />
                                 </div>
                             </div>
                         </div>
                     </div>
-                </section>
-
-
+                </div>
             </section>
+
+
+
 
 
             <section style={{ paddingTop: "7rem", paddingBottom: "3.5rem" }}>
@@ -331,114 +329,104 @@ const Home = () => {
 
                 {/* Carousels */}
                 <div className="container">
-        <div className="row justify-content-center">
-            <div className="col-12 col-md-10 d-flex justify-content-center">
-                {activeCarousel === 1 && (
-                    <div id="carouselExample1" className="carousel slide">
-                        <div className="carousel-inner">
-                            <div className="carousel-item active">
-                                <iframe
-                                    src="https://www.youtube.com/embed/Mv1KT2prJ1E?si=y49VOLIrRLFJwm3e"
-                                    className="d-block w-100"
-                                    
-                                    title="Video 1"
-                                    allowFullScreen
-                                ></iframe>
-                            </div>
-                            <div className="carousel-item">
-                                <iframe
-                                    src="https://www.youtube.com/embed/VIDEO_ID_2"
-                                    className="d-block w-100"
-                                    style={{ height: "500px" }} 
-                                    title="Video 2"
-                                    allowFullScreen
-                                ></iframe>
-                            </div>
-                        </div>
-                        <div className="d-flex justify-content-center">
-                            <button className="carousel-control-prev" type="button" data-bs-target="#carouselExample1" data-bs-slide="prev">
-                                <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span className="visually-hidden">Previous</span>
-                            </button>
-                            <button className="carousel-control-next" type="button" data-bs-target="#carouselExample1" data-bs-slide="next">
-                                <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span className="visually-hidden">Next</span>
-                            </button>
-                        </div>
-                    </div>
-                )}
-                {activeCarousel === 2 && (
-                    <div id="carouselExample2" className="carousel slide">
-                        <div className="carousel-inner">
-                            <div className="carousel-item active">
-                                <iframe
-                                    src="https://www.youtube.com/embed/VIDEO_ID_3"
-                                    className="d-block w-100"
-                                    style={{ height: "500px" }}
-                                    title="Video 3"
-                                    allowFullScreen
-                                ></iframe>
-                            </div>
-                            <div className="carousel-item">
-                                <iframe
-                                    src="https://www.youtube.com/embed/VIDEO_ID_4"
-                                    className="d-block w-100"
-                                    style={{ height: "500px" }}
-                                    title="Video 4"
-                                    allowFullScreen
-                                ></iframe>
-                            </div>
-                        </div>
-                        <div className="d-flex justify-content-center">
-                            <button className="carousel-control-prev" type="button" data-bs-target="#carouselExample2" data-bs-slide="prev">
-                                <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span className="visually-hidden">Previous</span>
-                            </button>
-                            <button className="carousel-control-next" type="button" data-bs-target="#carouselExample2" data-bs-slide="next">
-                                <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span className="visually-hidden">Next</span>
-                            </button>
-                        </div>
-                    </div>
-                )}
-                {activeCarousel === 3 && (
-                    <div id="carouselExample3" className="carousel slide">
-                        <div className="carousel-inner">
-                            <div className="carousel-item active">
-                                <iframe
-                                    src="https://www.youtube.com/embed/VIDEO_ID_5"
-                                    className="d-block w-100"
-                                    style={{ height: "500px" }}
-                                    title="Video 5"
-                                    allowFullScreen
-                                ></iframe>
-                            </div>
-                            <div className="carousel-item">
-                                <iframe
-                                    src="https://www.youtube.com/embed/VIDEO_ID_6"
-                                    className="d-block w-100"
-                                    style={{ height: "500px" }}
-                                    title="Video 6"
-                                    allowFullScreen
-                                ></iframe>
-                            </div>
-                        </div>
-                        <div className="d-flex justify-content-center">
-                            <button className="carousel-control-prev" type="button" data-bs-target="#carouselExample3" data-bs-slide="prev">
-                                <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span className="visually-hidden">Previous</span>
-                            </button>
-                            <button className="carousel-control-next" type="button" data-bs-target="#carouselExample3" data-bs-slide="next">
-                                <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span className="visually-hidden">Next</span>
-                            </button>
+                    <div className="row justify-content-center">
+                        <div className="col-12 col-md-10 d-flex justify-content-center">
+                            {activeCarousel === 1 && (
+                                <div id="carouselExample1" className="carousel slide">
+                                    <div className="carousel-inner">
+                                        <div className="carousel-item active">
+                                            <iframe
+                                                src="https://www.youtube.com/embed/VIDEO_ID_1"
+                                                className="d-block w-100"
+                                                title="Video 1"
+                                                allowFullScreen
+                                            ></iframe>
+                                        </div>
+                                        <div className="carousel-item">
+                                            <iframe
+                                                src="https://www.youtube.com/embed/VIDEO_ID_2"
+                                                className="d-block w-100"
+                                                title="Video 2"
+                                                allowFullScreen
+                                            ></iframe>
+                                        </div>
+                                    </div>
+                                    <button className="carousel-control-prev" type="button" data-bs-target="#carouselExample1" data-bs-slide="prev">
+                                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span className="visually-hidden">Previous</span>
+                                    </button>
+                                    <button className="carousel-control-next" type="button" data-bs-target="#carouselExample1" data-bs-slide="next">
+                                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span className="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+                            )}
+                            {activeCarousel === 2 && (
+                                <div id="carouselExample2" className="carousel slide">
+                                    <div className="carousel-inner">
+                                        <div className="carousel-item active">
+                                            <iframe
+                                                src="https://www.youtube.com/embed/VIDEO_ID_3"
+                                                className="d-block w-100"
+                                                title="Video 3"
+                                                allowFullScreen
+                                            ></iframe>
+                                        </div>
+                                        <div className="carousel-item">
+                                            <iframe
+                                                src="https://www.youtube.com/embed/VIDEO_ID_4"
+                                                className="d-block w-100"
+                                                title="Video 4"
+                                                allowFullScreen
+                                            ></iframe>
+                                        </div>
+                                    </div>
+                                    <button className="carousel-control-prev" type="button" data-bs-target="#carouselExample2" data-bs-slide="prev">
+                                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span className="visually-hidden">Previous</span>
+                                    </button>
+                                    <button className="carousel-control-next" type="button" data-bs-target="#carouselExample2" data-bs-slide="next">
+                                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span className="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+                            )}
+                            {activeCarousel === 3 && (
+                                <div id="carouselExample3" className="carousel slide">
+                                    <div className="carousel-inner">
+                                        <div className="carousel-item active">
+                                            <iframe
+                                                src="https://www.youtube.com/embed/VIDEO_ID_5"
+                                                className="d-block w-100"
+                                                title="Video 5"
+                                                allowFullScreen
+                                            ></iframe>
+                                        </div>
+                                        <div className="carousel-item">
+                                            <iframe
+                                                src="https://www.youtube.com/embed/VIDEO_ID_6"
+                                                className="d-block w-100"
+                                                title="Video 6"
+                                                allowFullScreen
+                                            ></iframe>
+                                        </div>
+                                    </div>
+                                    <button className="carousel-control-prev" type="button" data-bs-target="#carouselExample3" data-bs-slide="prev">
+                                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span className="visually-hidden">Previous</span>
+                                    </button>
+                                    <button className="carousel-control-next" type="button" data-bs-target="#carouselExample3" data-bs-slide="next">
+                                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span className="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+                            )}
                         </div>
                     </div>
-                )}
-            </div>
-        </div>
-    </div>
-</section>
+                </div>
+
+
+            </section >
 
             <section style={{ backgroundColor: "#f5f7f9", paddingTop: "7rem", paddingBottom: "3.5rem" }}>
                 <h1 className="text-center fw-bolder mb-5">10 Milyon Mutlu Müşteri, 50+ Milyon Poliçe Teklifi</h1>
@@ -488,10 +476,10 @@ const Home = () => {
                         <div className="col-sm-12 col-md-6 col-xl-6 justify-flex-end">
                             <div className='row justify-content-end d-flex'>
                                 <div className='col-6'>
-                                    <img src={prize1} style={{ width: "220px", height: "200px"}} alt="Feature 1" />
+                                    <img src={prize1} style={{ width: "220px", height: "200px" }} alt="Feature 1" />
                                 </div>
                                 <div className='col-6'>
-                                    <img src={prize2} style={{ width: "120px", height: "200px"}} alt="Feature 2" />
+                                    <img src={prize2} style={{ width: "120px", height: "200px" }} alt="Feature 2" />
                                 </div>
                             </div>
                         </div>
@@ -507,7 +495,7 @@ const Home = () => {
                 <div className="container text-center mt-5">
                     <h3 className="mb-4 fw-bolder">20’den fazla sigorta şirketinden teklif al</h3>
                     <div className="container text-center mt-5">
-                        
+
                         <div className="row">
                             {displayedCompanies.map((company, index) => (
                                 <div className="col-12 col-sm-6 col-md-4 col-lg-2 mb-4" key={index}>
@@ -519,7 +507,7 @@ const Home = () => {
                                 </div>
                             ))}
                         </div>
-                        
+
                     </div>
                     <button className="btn btn-primary mt-3" onClick={toggleShowAll}>
                         {showAll ? "Daha Az Sigorta Şirketini Gör" : "+14 Sigorta Şirketini Gör"}
@@ -528,9 +516,9 @@ const Home = () => {
 
                 {/* Sigortam.net Hakkında En Merak Edilen 5 Soru Accordion*/}
                 <div style={{ backgroundColor: "#f5f7f9", paddingTop: "7rem", paddingBottom: "3.5rem" }}>
-                    <h1 className='text-center fw-bolder mb-4'>Sigortam.net Hakkında En Merak Edilen 5 Soru</h1>
+                    <h1 className='text-center fw-bolder mb-4 '>Sigortam.net Hakkında En Merak Edilen 5 Soru</h1>
 
-                    <div className='col-8 offset-md-2'>
+                    <div className='col-8 offset-md-2 '>
 
                         <div class="accordion accordion-flush" id="accordionFlushExample">
                             <div class="accordion-item">
@@ -591,110 +579,103 @@ const Home = () => {
             </section>
 
 
-            <section style={{ backgroundColor: "#f5f7f9", paddingTop: "7rem", paddingBottom: "3.5rem" }}>
+            <section style={{ paddingTop: "7rem", backgroundColor: "#f5f7f9", paddingBottom: "3.5rem" }}>
+                <div className="container text-center">
+                    <h1 style={{ fontFamily: "sans-serif", fontSize: "3rem" }} className='fw-bolder'>Sigortada Güvenin Adresi</h1>
+                    <small className="text-muted d-block" style={{ fontSize: "1.2rem", marginBottom: "3rem" }}>Doğru Ürün. İyi Fiyat. 7/24 Hizmet.</small>
 
-                <div className='row row-cols-6 col-6 offset-md-3'>
+                    <div className="row justify-content-center">
+                        {/* Üst Sıradaki Kartlar */}
+                        <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                            <a href="#" style={{ textDecoration: "none" }} className="text-primary">
+                                <div className="card custom-card" id='x'>
+                                    <img src={one} className="card-img-top" alt="Kasko" />
+                                    <div className="card-body">
+                                        <h5 className="card-title" style={{ fontSize: "1rem", fontWeight: "bold" }}>Kasko</h5>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                            <a href="#" style={{ textDecoration: "none" }} className="text-primary">
+                                <div className="card custom-card" id='x'>
+                                    <img src={two} className="card-img-top" alt="Elektrikli Araç Kaskosu" />
+                                    <div className="card-body">
+                                        <h5 className="card-title" style={{ fontSize: "1rem", fontWeight: "bold" }}>Elektrikli Araç Kaskosu</h5>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                            <a href="#" style={{ textDecoration: "none" }} className="text-primary">
+                                <div className="card custom-card" id='x'>
+                                    <img src={three} className="card-img-top" alt="Tamamlayıcı Sağlık" />
+                                    <div className="card-body">
+                                        <h5 className="card-title" style={{ fontSize: "1rem", fontWeight: "bold" }}>Tamamlayıcı Sağlık</h5>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                            <a href="#" style={{ textDecoration: "none" }} className="text-primary">
+                                <div className="card custom-card" id='x'>
+                                    <img src={four} className="card-img-top" alt="Trafik Sigortası" />
+                                    <div className="card-body">
+                                        <h5 className="card-title" style={{ fontSize: "1rem", fontWeight: "bold" }}>Trafik Sigortası</h5>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                            <a href="#" style={{ textDecoration: "none" }} className="text-primary">
+                                <div className="card custom-card" id='x'>
+                                    <img src={five} className="card-img-top" alt="İMM" />
+                                    <div className="card-body">
+                                        <h5 className="card-title" style={{ fontSize: "1rem", fontWeight: "bold" }}>İMM</h5>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                            <a href="#" style={{ textDecoration: "none" }} className="text-primary">
+                                <div className="card custom-card" id='x'>
+                                    <img src={six} className="card-img-top" alt="Özel Sağlık" />
+                                    <div className="card-body">
+                                        <h5 className="card-title" style={{ fontSize: "1rem", fontWeight: "bold" }}>Özel Sağlık</h5>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                            <a href="#" style={{ textDecoration: "none" }} className="text-primary">
+                                <div className="card custom-card" id='x'>
+                                    <img src={seven} className="card-img-top" alt="Seyahat Sağlık" />
+                                    <div className="card-body">
+                                        <h5 className="card-title" style={{ fontSize: "1rem", fontWeight: "bold" }}>Seyahat Sağlık</h5>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                            <a href="#" style={{ textDecoration: "none" }} className="text-primary">
+                                <div className="card custom-card" id='x'>
+                                    <img src={eight} className="card-img-top" alt="DASK" />
+                                    <div className="card-body">
+                                        <h5 className="card-title" style={{ fontSize: "1rem", fontWeight: "bold" }}>DASK</h5>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
 
-                    <div className="col mb-4">
-                        <div className="custom-card" style={{ maxWidth: "250px", maxHeight: "250px" }}>
-                            <img src={one} style={{ width: "100px", height: "auto", display: "block", margin: "0 auto" }} className="card-img-top" alt="Kasko" />
-                            <div className="card-body">
-                                <h5 className="card-title" style={{ textAlign: "center", fontSize: "1rem", fontWeight: "bold" }}>Kasko</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col mb-4">
-                        <div className="custom-card h-100 w-100 ">
-                            <img src={one} style={{ width: "100px", height: "auto", display: "block", margin: "0 auto" }} className="card-img-top" alt="Kasko" />
-                            <div className="card-body">
-                                <h5 className="card-title" style={{ textAlign: "center", fontSize: "1rem", fontWeight: "bold" }}>Kasko</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col mb-4">
-                        <div className="custom-card ">
-                            <img src={one} style={{ width: "100px", height: "auto", display: "block", margin: "0 auto" }} className="card-img-top" alt="Kasko" />
-                            <div className="card-body">
-                                <h5 className="card-title" style={{ textAlign: "center", fontSize: "1rem", fontWeight: "bold" }}>Kasko</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col mb-4">
-                        <div className="custom-card ">
-                            <img src={three} style={{ width: "100px", height: "auto", display: "block", margin: "0 auto" }} className="card-img-top" alt="Kasko" />
-                            <div className="card-body">
-                                <h5 className="card-title" style={{ textAlign: "center", fontSize: "1rem", fontWeight: "bold" }}>Kasko</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col mb-4">
-                        <div className="custom-card ">
-                            <img src={six} style={{ width: "100px", height: "auto", display: "block", margin: "0 auto" }} className="card-img-top" alt="Kasko" />
-                            <div className="card-body">
-                                <h5 className="card-title" style={{ textAlign: "center", fontSize: "1rem", fontWeight: "bold" }}>Kasko</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col mb-4">
-                        <div className="custom-card custom-card h-100 w-100 ">
-                            <img src={seven} style={{ width: "100px", height: "auto", display: "block", margin: "0 auto" }} className="card-img-top" alt="Kasko" />
-                            <div className="card-body">
-                                <h5 className="card-title" style={{ textAlign: "center", fontSize: "1rem", fontWeight: "bold" }}>Kasko</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col mb-4">
-                        <div className="custom-card ">
-                            <img src={one} style={{ width: "100px", height: "auto", display: "block", margin: "0 auto" }} className="card-img-top" alt="Kasko" />
-                            <div className="card-body">
-                                <h5 className="card-title" style={{ textAlign: "center", fontSize: "1rem", fontWeight: "bold" }}>Kasko</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col mb-4">
-                        <div className="custom-card ">
-                            <img src={one} style={{ width: "100px", height: "auto", display: "block", margin: "0 auto" }} className="card-img-top" alt="Kasko" />
-                            <div className="card-body">
-                                <h5 className="card-title" style={{ textAlign: "center", fontSize: "1rem", fontWeight: "bold" }}>Kasko</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col mb-4">
-                        <div className="custom-card ">
-                            <img src={one} style={{ width: "100px", height: "auto", display: "block", margin: "0 auto" }} className="card-img-top" alt="Kasko" />
-                            <div className="card-body">
-                                <h5 className="card-title" style={{ textAlign: "center", fontSize: "1rem", fontWeight: "bold" }}>Kasko</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col mb-4">
-                        <div className="custom-card ">
-                            <img src={one} style={{ width: "100px", height: "auto", display: "block", margin: "0 auto" }} className="card-img-top" alt="Kasko" />
-                            <div className="card-body">
-                                <h5 className="card-title" style={{ textAlign: "center", fontSize: "1rem", fontWeight: "bold" }}>Kasko</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col mb-4">
-                        <div className="custom-card ">
-                            <img src={one} style={{ width: "100px", height: "auto", display: "block", margin: "0 auto" }} className="card-img-top" alt="Kasko" />
-                            <div className="card-body">
-                                <h5 className="card-title" style={{ textAlign: "center", fontSize: "1rem", fontWeight: "bold" }}>Kasko</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col mb-4">
-                        <div className="custom-card ">
-                            <img src={one} style={{ width: "100px", height: "auto", display: "block", margin: "0 auto" }} className="card-img-top" alt="Kasko" />
-                            <div className="card-body">
-                                <h5 className="card-title" style={{ textAlign: "center", fontSize: "1rem", fontWeight: "bold" }}>Kasko</h5>
-                            </div>
-                        </div>
-                    </div>
+                    <a href="#" onClick={handleDropdownToggle} className="mt-4 d-block text-primary">
+                        Tüm Ürünleri Gör
+                    </a>
                 </div>
             </section>
 
-        </div>
+
+        </div >
     );
 };
 

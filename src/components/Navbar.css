@@ -1,72 +1,80 @@
 .navbar-logo {
-    height: 40px; 
+  height: 40px; 
 }
 
 .navbar-phone {
-    font-weight: bold;
-    font-size: 1.1rem;
+  font-weight: bold;
+  font-size: 1.1rem;
 }
 
 .navbar .btn-primary {
-    background-color: #007bff; 
-    border: none;
-    padding: 10px 20px;
-    border-radius: 20px;
+  background-color: #007bff; 
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
 }
 
 .navbar .btn-primary:hover {
-    background-color: #0056b3;
+  background-color: #0056b3;
 }
 
-
 .text-underline {
-    position: relative;
-    display: inline-block;
-    
+  position: relative;
+  display: inline-block;
 }
 
 .text-underline::after {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 2px; 
-    bottom: 0;
-    left: 0;
-    background-color: rgb(39, 20, 126); 
-    opacity: 0; 
-    transition: width 0.3s ease, opacity 0.3s ease; 
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px; 
+  bottom: 0;
+  left: 0;
+  background-color: rgb(39, 20, 126); 
+  opacity: 0; 
+  transition: width 0.3s ease, opacity 0.3s ease; 
 }
 
 .text-underline:hover::after {
-    width: 100%;
-    opacity: 1; 
+  width: 100%;
+  opacity: 1; 
 }
 
-/* Navbar.css */
 .mega-dropdown {
-    width: 100%;
-    left: 0;
-    right: 0;
-    padding: 1rem;
-    background-color: white;
-    border-radius: 0.5rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .mega-dropdown .container {
-    max-width: 1200px;
-  }
-  
-  .mega-dropdown h6 {
-    margin-bottom: 1rem;
-    font-weight: bold;
-  }
-  
-  .mega-dropdown .dropdown-item {
-    padding: 0.5rem 0;
-  }
-  
-  .mega-dropdown .badge {
-    margin-left: 0.5rem;
-  }
-  
+  position: absolute; /* Ensure dropdown is positioned correctly */
+  top: 100%; /* Position it below the button */
+  left: 0;
+  width: 100%; /* Full width of the parent */
+  padding: 1rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* Make sure dropdown is on top */
+}
+
+.mega-dropdown .container {
+  max-width: 1200px;
+}
+
+.mega-dropdown h6 {
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.mega-dropdown .dropdown-item {
+  padding: 0.5rem 1rem; /* Add some horizontal padding */
+}
+
+.mega-dropdown .badge {
+  margin-left: 0.5rem;
+}
+
+.navbar nav {
+  display: flex;
+  align-items: center;
+}
+
+.navbar  {
+  height: auto;
+  width: auto;
+}

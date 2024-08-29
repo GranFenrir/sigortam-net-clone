@@ -4,7 +4,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import photo from '../photos/app-logo-title.svg';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 
-
 const Navbar = () => {
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light sticky-top">
@@ -16,7 +15,7 @@ const Navbar = () => {
                 <section>
                 <div className="collapse navbar-collapse justify-content-center ml-5" id="navbarNav">
                     <ul className="navbar-nav">
-                        <li className="nav-item dropdown">
+                        <li className="nav-item dropdown position-relative"> {/* Added position-relative */}
                             <a className="nav-link dropdown-toggle text-underline" href="#" id="productsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Ürünlerimiz
                             </a>
