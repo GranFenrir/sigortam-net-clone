@@ -41,15 +41,15 @@
 }
 
 .mega-dropdown {
-  position: absolute; /* Ensure dropdown is positioned correctly */
-  top: 100%; /* Position it below the button */
+  position: absolute; 
+  top: 100%; 
   left: 0;
-  width: 100%; /* Full width of the parent */
+  width: 100%; 
   padding: 1rem;
   background-color: white;
   border-radius: 0.5rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  z-index: 1000; /* Make sure dropdown is on top */
+  z-index: 1000;
 }
 
 .mega-dropdown .container {
@@ -62,7 +62,7 @@
 }
 
 .mega-dropdown .dropdown-item {
-  padding: 0.5rem 1rem; /* Add some horizontal padding */
+  padding: 0.5rem 1rem; 
 }
 
 .mega-dropdown .badge {

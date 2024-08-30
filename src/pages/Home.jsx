@@ -20,7 +20,6 @@ import phone from '../photos/phone.jpg';
 import prize1 from '../photos/snet-gold-winner-badge.png';
 import prize2 from '../photos/if-design-award-2024-vertical.png';
 import '../components/Home.css';
-import Navbar from '../components/Navbar';
 
 const Home = () => {
     const [activeCarousel, setActiveCarousel] = useState(null);
@@ -97,104 +96,105 @@ const Home = () => {
     return (
         <div>
 
-<section style={{ paddingTop: "7rem", backgroundColor: "#f5f7f9", paddingBottom: "3.5rem" }}>
-    <div className="container text-center  col-6 offset-3">
-        <h1 style={{ fontFamily: "sans-serif", fontSize: "3rem" }} className='fw-bolder'>Sigortada Güvenin Adresi</h1>
-        <small className="text-muted d-block" style={{ fontSize: "1.2rem", marginBottom: "3rem" }}>Doğru Ürün. İyi Fiyat. 7/24 Hizmet.</small>
+            <section style={{ paddingTop: "7rem", backgroundColor: "#f5f7f9", paddingBottom: "3.5rem" }}>
+                <div className="container text-center  col-6 offset-3">
+                    <h1 style={{ fontFamily: "sans-serif", fontSize: "3rem" }} className='fw-bolder'>Sigortada Güvenin Adresi</h1>
+                    <small className="text-muted d-block" style={{ fontSize: "1.2rem", marginBottom: "3rem" }}>Doğru Ürün. İyi Fiyat. 7/24 Hizmet.</small>
 
-        <div className="row justify-content-between align-items-start">
-            {/* Üst Sıradaki Kartlar (3 cards) */}
-            <div className="col-12 col-sm-6 col-md-4 mb-4">
-                <a href="#" style={{ textDecoration: "none" }} className="text-primary">
-                    <div className="card custom-card" id='x'>
-                        <img src={one} className="card-img-top" alt="Kasko" />
-                        <div className="card-body">
-                            <h5 className="card-title" style={{ fontSize: "1rem", fontWeight: "bold" }}>Kasko</h5>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div className="col-12 col-sm-6 col-md-4 mb-4">
-                <a href="#" style={{ textDecoration: "none" }} className="text-primary">
-                    <div className="card custom-card" id='x'>
-                        <img src={two} className="card-img-top" alt="Elektrikli Araç Kaskosu" />
-                        <div className="card-body">
-                            <h5 className="card-title" style={{ fontSize: "1rem", fontWeight: "bold" }}>Elektrikli Araç Kaskosu</h5>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div className="col-12 col-sm-6 col-md-4 mb-4">
-                <a href="#" style={{ textDecoration: "none" }} className="text-primary">
-                    <div className="card custom-card" id='x'>
-                        <img src={three} className="card-img-top" alt="Tamamlayıcı Sağlık" />
-                        <div className="card-body">
-                            <h5 className="card-title" style={{ fontSize: "1rem", fontWeight: "bold" }}>Tamamlayıcı Sağlık</h5>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
+                    <div className="row justify-content-between align-items-start">
+                        {/* Üst Sıradaki Kartlar (3 cards) */}
+                        <div className="col-12 col-sm-6 col-md-4 mb-4">
+                            <Link to={`/kasko`}>
+                                <div className="card custom-card" id='x'>
+                                    <img src={one} className="card-img-top" alt="Kasko" />
+                                    <div className="card-body">
+                                        <h5 className="card-title" style={{ fontSize: "1rem", fontWeight: "bold" }}>Kasko</h5>
+                                    </div>
+                                </div>
+                            </Link>
 
-        <div className="row justify-content-between align-items-start">
-            {/* Alt Sıradaki Kartlar (5 cards) */}
-            <div className="col-12 col-sm-6 col-md-4 col-lg-2 mb-4">
-                <a href="#" style={{ textDecoration: "none" }} className="text-primary">
-                    <div className="card custom-card" id='x'>
-                        <img src={four} className="card-img-top" alt="Trafik Sigortası" />
-                        <div className="card-body">
-                            <h5 className="card-title" style={{ fontSize: "1rem", fontWeight: "bold" }}>Trafik Sigortası</h5>
+                        </div>
+                        <div className="col-12 col-sm-6 col-md-4 mb-4">
+                            <a href="#" style={{ textDecoration: "none" }} className="text-primary">
+                                <div className="card custom-card" id='x'>
+                                    <img src={two} className="card-img-top" alt="Elektrikli Araç Kaskosu" />
+                                    <div className="card-body">
+                                        <h5 className="card-title" style={{ fontSize: "1rem", fontWeight: "bold" }}>Elektrikli Araç Kaskosu</h5>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div className="col-12 col-sm-6 col-md-4 mb-4">
+                            <a href="#" style={{ textDecoration: "none" }} className="text-primary">
+                                <div className="card custom-card" id='x'>
+                                    <img src={three} className="card-img-top" alt="Tamamlayıcı Sağlık" />
+                                    <div className="card-body">
+                                        <h5 className="card-title" style={{ fontSize: "1rem", fontWeight: "bold" }}>Tamamlayıcı Sağlık</h5>
+                                    </div>
+                                </div>
+                            </a>
                         </div>
                     </div>
-                </a>
-            </div>
-            <div className="col-12 col-sm-6 col-md-4 col-lg-2 mb-4">
-                <a href="#" style={{ textDecoration: "none" }} className="text-primary">
-                    <div className="card custom-card" id='x'>
-                        <img src={five} className="card-img-top" alt="İMM" />
-                        <div className="card-body">
-                            <h5 className="card-title" style={{ fontSize: "1rem", fontWeight: "bold" }}>İMM</h5>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div className="col-12 col-sm-6 col-md-4 col-lg-2 mb-4">
-                <a href="#" style={{ textDecoration: "none" }} className="text-primary">
-                    <div className="card custom-card" id='x'>
-                        <img src={six} className="card-img-top" alt="Özel Sağlık" />
-                        <div className="card-body">
-                            <h5 className="card-title" style={{ fontSize: "1rem", fontWeight: "bold" }}>Özel Sağlık</h5>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div className="col-12 col-sm-6 col-md-4 col-lg-2 mb-4">
-                <a href="#" style={{ textDecoration: "none" }} className="text-primary">
-                    <div className="card custom-card" id='x'>
-                        <img src={seven} className="card-img-top" alt="Seyahat Sağlık" />
-                        <div className="card-body">
-                            <h5 className="card-title" style={{ fontSize: "1rem", fontWeight: "bold" }}>Seyahat Sağlık</h5>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div className="col-12 col-sm-6 col-md-4 col-lg-2 mb-4">
-                <a href="#" style={{ textDecoration: "none" }} className="text-primary">
-                    <div className="card custom-card" id='x'>
-                        <img src={eight} className="card-img-top" alt="DASK" />
-                        <div className="card-body">
-                            <h5 className="card-title" style={{ fontSize: "1rem", fontWeight: "bold" }}>DASK</h5>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
 
-        <a href="#" onClick={handleDropdownToggle} className="mt-4 d-block text-primary">
-            Tüm Ürünleri Gör
-        </a>
-    </div>
-</section>
+                    <div className="row justify-content-between align-items-start">
+                        {/* Alt Sıradaki Kartlar (5 cards) */}
+                        <div className="col-12 col-sm-6 col-md-4 col-lg-2 mb-4">
+                            <a href="#" style={{ textDecoration: "none" }} className="text-primary">
+                                <div className="card custom-card" id='x'>
+                                    <img src={four} className="card-img-top" alt="Trafik Sigortası" />
+                                    <div className="card-body">
+                                        <h5 className="card-title" style={{ fontSize: "1rem", fontWeight: "bold" }}>Trafik Sigortası</h5>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div className="col-12 col-sm-6 col-md-4 col-lg-2 mb-4">
+                            <a href="#" style={{ textDecoration: "none" }} className="text-primary">
+                                <div className="card custom-card" id='x'>
+                                    <img src={five} className="card-img-top" alt="İMM" />
+                                    <div className="card-body">
+                                        <h5 className="card-title" style={{ fontSize: "1rem", fontWeight: "bold" }}>İMM</h5>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div className="col-12 col-sm-6 col-md-4 col-lg-2 mb-4">
+                            <a href="#" style={{ textDecoration: "none" }} className="text-primary">
+                                <div className="card custom-card" id='x'>
+                                    <img src={six} className="card-img-top" alt="Özel Sağlık" />
+                                    <div className="card-body">
+                                        <h5 className="card-title" style={{ fontSize: "1rem", fontWeight: "bold" }}>Özel Sağlık</h5>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div className="col-12 col-sm-6 col-md-4 col-lg-2 mb-4">
+                            <a href="#" style={{ textDecoration: "none" }} className="text-primary">
+                                <div className="card custom-card" id='x'>
+                                    <img src={seven} className="card-img-top" alt="Seyahat Sağlık" />
+                                    <div className="card-body">
+                                        <h5 className="card-title" style={{ fontSize: "1rem", fontWeight: "bold" }}>Seyahat Sağlık</h5>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div className="col-12 col-sm-6 col-md-4 col-lg-2 mb-4">
+                            <a href="#" style={{ textDecoration: "none" }} className="text-primary">
+                                <div className="card custom-card" id='x'>
+                                    <img src={eight} className="card-img-top" alt="DASK" />
+                                    <div className="card-body">
+                                        <h5 className="card-title" style={{ fontSize: "1rem", fontWeight: "bold" }}>DASK</h5>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <a href="#" onClick={handleDropdownToggle} className="mt-4 d-block text-primary">
+                        Tüm Ürünleri Gör
+                    </a>
+                </div>
+            </section>
 
 
 
@@ -245,32 +245,7 @@ const Home = () => {
                                 <h3 className='fw-bold'>Hangi ürün bana en uygun diye düşünme, biz senin için en net teklifleri sıraladık bile!</h3>
                                 <p>Tüm teminatları tek tek inceledik, ihtiyaçlarına en uygun olan teminatları belirledik. Sana özel kapsamlı ve fiyatı uygun ürün önerileri hazırladık.</p>
                             </div>
-                            <br />
-                            <br />
-                            <br />
-                            <br />
-                            <br />
-                            <br />
-                            <br />
-                            <br />
-                            <br />
-                            <br />
-                            <br />
-                            <br />
-                            <br />
-                            <br />
-                            <br />
-                            <br />
-                            <br />
-                            <br />
-                            <br />
-                            <br />
-                            <br />
-                            <br />
-                            <br />
-                            <br />
-                            <br />
-                            <br />
+                            <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />
                             <div id="text2" className="text-container text-start">
                                 <h3 className='fw-bold'>Sadece 2 dakikada tüm teklifleri kolayca karşılaştır.</h3>
                                 <p>20+ sigorta şirketinden teklifleri tek platformda karşılaştır, internete özel indirimlerle uygun fiyata sigortan anında başlasın.</p>
@@ -335,8 +310,10 @@ const Home = () => {
                                 <div id="carouselExample1" className="carousel slide">
                                     <div className="carousel-inner">
                                         <div className="carousel-item active">
+
                                             <iframe
-                                                src="https://www.youtube.com/embed/VIDEO_ID_1"
+                                                src="https://www.youtube.com/embed/-ZpvfneEadA?enablejsapi=1&version=3&playerapiid=ytplayer&rel=0&mute=1"
+
                                                 className="d-block w-100"
                                                 title="Video 1"
                                                 allowFullScreen
@@ -344,7 +321,7 @@ const Home = () => {
                                         </div>
                                         <div className="carousel-item">
                                             <iframe
-                                                src="https://www.youtube.com/embed/VIDEO_ID_2"
+                                                src="https://www.youtube.com/embed/UQ-3UkXC09E?enablejsapi=1&version=3&playerapiid=ytplayer&rel=0&mute=1"
                                                 className="d-block w-100"
                                                 title="Video 2"
                                                 allowFullScreen

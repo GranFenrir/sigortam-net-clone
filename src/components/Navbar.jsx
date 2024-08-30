@@ -15,7 +15,7 @@ const Navbar = () => {
                 <section>
                 <div className="collapse navbar-collapse justify-content-center ml-5" id="navbarNav">
                     <ul className="navbar-nav">
-                        <li className="nav-item dropdown position-relative"> {/* Added position-relative */}
+                        <li className="nav-item dropdown position-relative"> 
                             <a className="nav-link dropdown-toggle text-underline" href="#" id="productsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Ürünlerimiz
                             </a>
