@@ -28,59 +28,59 @@ const Footer = () => {
             <div className="col-md-2">
               <h5>Ürünlerimiz</h5>
               <ul className="list-unstyled">
-                <li><a href="#" style={{ textDecoration: "none", color: "black" }}>Kasko Sigortası</a></li>
-                <li><a href="#" style={{ textDecoration: "none", color: "black" }}>Trafik Sigortası</a></li>
-                <li><a href="#" style={{ textDecoration: "none", color: "black" }}>İMM Sigortası</a></li>
-                <li><a href="#" style={{ textDecoration: "none", color: "black" }}>Tamamlayıcı Sağlık Sigortası</a></li>
-                <li><a href="#" style={{ textDecoration: "none", color: "black" }}>Özel Sağlık Sigortası</a></li>
-                <li><a href="#" style={{ textDecoration: "none", color: "black" }}>Konut Sigortası</a></li>
-                <li><a href="#" style={{ textDecoration: "none", color: "black" }}>DASK</a></li>
-                <li><a href="#" style={{ textDecoration: "none", color: "black" }}>Evim Güvende Sigortası</a></li>
-                <li><a href="#" style={{ textDecoration: "none", color: "black" }}>Ferdi Kaza Sigortası</a></li>
-                <li><a href="#" style={{ textDecoration: "none", color: "black" }}>Telefon Kaskosu</a></li>
-                <li><a href="#" style={{ textDecoration: "none", color: "black" }}>Evcil Hayvan Sigortası</a></li>
-                <li><a href="#" style={{ textDecoration: "none", color: "black" }}>Seyahat Sağlık Sigortası</a></li>
+                <li><a href="#" style={{ textDecoration: "none", color: "gray" }}>Kasko Sigortası</a></li>
+                <li><a href="#" style={{ textDecoration: "none", color: "gray" }}>Trafik Sigortası</a></li>
+                <li><a href="#" style={{ textDecoration: "none", color: "gray" }}>İMM Sigortası</a></li>
+                <li><a href="#" style={{ textDecoration: "none", color: "gray" }}>Tamamlayıcı Sağlık Sigortası</a></li>
+                <li><a href="#" style={{ textDecoration: "none", color: "gray" }}>Özel Sağlık Sigortası</a></li>
+                <li><a href="#" style={{ textDecoration: "none", color: "gray" }}>Konut Sigortası</a></li>
+                <li><a href="#" style={{ textDecoration: "none", color: "gray" }}>DASK</a></li>
+                <li><a href="#" style={{ textDecoration: "none", color: "gray" }}>Evim Güvende Sigortası</a></li>
+                <li><a href="#" style={{ textDecoration: "none", color: "gray" }}>Ferdi Kaza Sigortası</a></li>
+                <li><a href="#" style={{ textDecoration: "none", color: "gray" }}>Telefon Kaskosu</a></li>
+                <li><a href="#" style={{ textDecoration: "none", color: "gray" }}>Evcil Hayvan Sigortası</a></li>
+                <li><a href="#" style={{ textDecoration: "none", color: "gray" }}>Seyahat Sağlık Sigortası</a></li>
               </ul>
             </div>
             <div className="col-md-2">
               <h5>Merak Edilenler</h5>
               <ul className="list-unstyled">
-                <li><a href="#" style={{ textDecoration: "none", color: "black" }}>Günlük, Haftalık ve Aylık Kasko</a></li>
-                <li><a href="#" style={{ textDecoration: "none", color: "black" }}>Doğum Sigortası Fiyatları</a></li>
-                <li><a href="#" style={{ textDecoration: "none", color: "black" }}>Hamileyken Doğum Sigortası</a></li>
-                <li><a href="#" style={{ textDecoration: "none", color: "black" }}>İMM Sigortası Nedir</a></li>
-                <li><a href="#" style={{ textDecoration: "none", color: "black" }}>İnternetten Trafik Sigortası Yaptırmak</a></li>
-                <li><a href="#" style={{ textDecoration: "none", color: "black" }}>Sağlık Sigortası Karşılaştırma</a></li>
-                <li><a href="#" style={{ textDecoration: "none", color: "black" }}>SBM Teklif Al</a></li>
-                <li><a href="#" style={{ textDecoration: "none", color: "black" }}>Trafik Sigortası Şirketleri</a></li>
-                <li><a href="#" style={{ textDecoration: "none", color: "black" }}>TSS Doğum Paketi</a></li>
+                <li><a href="#" style={{ textDecoration: "none", color: "gray" }}>Günlük, Haftalık ve Aylık Kasko</a></li>
+                <li><a href="#" style={{ textDecoration: "none", color: "gray" }}>Doğum Sigortası Fiyatları</a></li>
+                <li><a href="#" style={{ textDecoration: "none", color: "gray" }}>Hamileyken Doğum Sigortası</a></li>
+                <li><a href="#" style={{ textDecoration: "none", color: "gray" }}>İMM Sigortası Nedir</a></li>
+                <li><a href="#" style={{ textDecoration: "none", color: "gray" }}>İnternetten Trafik Sigortası Yaptırmak</a></li>
+                <li><a href="#" style={{ textDecoration: "none", color: "gray" }}>Sağlık Sigortası Karşılaştırma</a></li>
+                <li><a href="#" style={{ textDecoration: "none", color: "gray" }}>SBM Teklif Al</a></li>
+                <li><a href="#" style={{ textDecoration: "none", color: "gray" }}>Trafik Sigortası Şirketleri</a></li>
+                <li><a href="#" style={{ textDecoration: "none", color: "gray" }}>TSS Doğum Paketi</a></li>
               </ul>
             </div>
             <div className="col-md-2">
               <h5>Hızlı Erişim</h5>
-              <ul className="list-unstyled">
-                <li><a href="#" style={{ textDecoration: "none", color: "black" }}>Araç Yakıt Hesaplama</a></li>
-                <li><a href="#" style={{ textDecoration: "none", color: "black" }}>Kasko Değer Listesi</a></li>
-                <li><a href="#" style={{ textDecoration: "none", color: "black" }}>MTV Hesaplama</a></li>
-                <li><a href="#" style={{ textDecoration: "none", color: "black" }}>ÖTV Hesaplama</a></li>
-                <li><a href="#" style={{ textDecoration: "none", color: "black" }}>Trafik Sigortası Basamakları Hesaplama</a></li>
-                <li><a href="#" style={{ textDecoration: "none", color: "black" }}>Tramer Kaydı Sorgulama</a></li>
-                <li><a href="#" style={{ textDecoration: "none", color: "black" }}>Zorunlu Trafik Sigortası Fiyatları</a></li>
+              <ul className="list-unstyled ">
+                <li><a href="#" style={{ textDecoration: "none", color: "gray" }}>Araç Yakıt Hesaplama</a></li>
+                <li><a href="#" style={{ textDecoration: "none", color: "gray" }}>Kasko Değer Listesi</a></li>
+                <li><a href="#" style={{ textDecoration: "none", color: "gray" }}>MTV Hesaplama</a></li>
+                <li><a href="#" style={{ textDecoration: "none", color: "gray" }}>ÖTV Hesaplama</a></li>
+                <li><a href="#" style={{ textDecoration: "none", color: "gray" }}>Trafik Sigortası Basamakları Hesaplama</a></li>
+                <li><a href="#" style={{ textDecoration: "none", color: "gray" }}>Tramer Kaydı Sorgulama</a></li>
+                <li><a href="#" style={{ textDecoration: "none", color: "gray" }}>Zorunlu Trafik Sigortası Fiyatları</a></li>
               </ul>
             </div>
             <div className="col-md-2">
               <h5>Hakkımızda</h5>
               <ul className="list-unstyled">
-                <li><a href="#" style={{ textDecoration: "none", color: "black" }}>Biz Kimiz?</a></li>
-                <li><a href="#" style={{ textDecoration: "none", color: "black" }}>İletişim</a></li>
-                <li><a href="#" style={{ textDecoration: "none", color: "black" }}>Ödüllerimiz</a></li>
-                <li><a href="#" style={{ textDecoration: "none", color: "black" }}>İşlem Rehberi</a></li>
-                <li><a href="#" style={{ textDecoration: "none", color: "black" }}>Kariyer</a></li>
-                <li><a href="#" style={{ textDecoration: "none", color: "black" }}>Kullanıcı Sözleşmesi</a></li>
-                <li><a href="#" style={{ textDecoration: "none", color: "black" }}>Kişisel Verilerin Korunması</a></li>
-                <li><a href="#" style={{ textDecoration: "none", color: "black" }}>Gizlilik ve Çerez Politikası</a></li>
-                <li><a href="#" style={{ textDecoration: "none", color: "black" }}>Çerez Tercihleri</a></li>
-                <li><a href="#" style={{ textDecoration: "none", color: "black" }}>Sigortam.net Basketbol Takımı</a></li>
+                <li><a href="#" style={{ textDecoration: "none", color: "gray" }}>Biz Kimiz?</a></li>
+                <li><a href="#" style={{ textDecoration: "none", color: "gray" }}>İletişim</a></li>
+                <li><a href="#" style={{ textDecoration: "none", color: "gray" }}>Ödüllerimiz</a></li>
+                <li><a href="#" style={{ textDecoration: "none", color: "gray" }}>İşlem Rehberi</a></li>
+                <li><a href="#" style={{ textDecoration: "none", color: "gray" }}>Kariyer</a></li>
+                <li><a href="#" style={{ textDecoration: "none", color: "gray" }}>Kullanıcı Sözleşmesi</a></li>
+                <li><a href="#" style={{ textDecoration: "none", color: "gray" }}>Kişisel Verilerin Korunması</a></li>
+                <li><a href="#" style={{ textDecoration: "none", color: "gray" }}>Gizlilik ve Çerez Politikası</a></li>
+                <li><a href="#" style={{ textDecoration: "none", color: "gray" }}>Çerez Tercihleri</a></li>
+                <li><a href="#" style={{ textDecoration: "none", color: "gray" }}>Sigortam.net Basketbol Takımı</a></li>
               </ul>
             </div>
             <div className="col-md-3 justify-content-end">
